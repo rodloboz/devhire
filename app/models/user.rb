@@ -6,4 +6,14 @@ class User < ApplicationRecord
 
   has_many :user_skills, dependent: :destroy
   has_many :skills, through: :user_skills
+
+  default_scope { order(hourly_rate: :desc) }
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def skills_to_s
+    skills.pluck(:name).map(&:titleize).join(" | ")
+  end
 end

@@ -19,7 +19,7 @@ torvalds = User.create!(
   first_name: "Linus",
   last_name: "Torvalds",
   github_username: "torvalds",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/1024025?v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/1024025?v=4",
   hourly_rate: 450,
   email: "torvalds@linuxfoundation.org",
   password: SecureRandom.base64(15)
@@ -32,7 +32,7 @@ wharton = User.create!(
   first_name: "Jake",
   last_name: "Wharton",
   github_username: "jakewharton",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/66577?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/66577?s=400&v=4",
   hourly_rate: 350,
   email: "jakewharton@gmail.com",
   password: SecureRandom.base64(15)
@@ -45,7 +45,7 @@ evan = User.create!(
   first_name: "Evan",
   last_name: "You",
   github_username: "yyx990803",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/499550?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/499550?s=400&v=4",
   hourly_rate: 420,
   email: "evanyou@gmail.com",
   password: SecureRandom.base64(15)
@@ -58,7 +58,7 @@ tj = User.create!(
   first_name: "TJ",
   last_name: " Holowaychuk",
   github_username: "tj",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/25254?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/25254?s=400&v=4",
   hourly_rate: 390,
   email: "tj@apex.sh",
   password: SecureRandom.base64(15)
@@ -71,7 +71,7 @@ abramov = User.create!(
   first_name: "Dan",
   last_name: " Abramov",
   github_username: "gaearon",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/810438?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/810438?s=400&v=4",
   hourly_rate: 420,
   email: "dan.abramov@me.com",
   password: SecureRandom.base64(15)
@@ -84,7 +84,7 @@ sindresorhus = User.create!(
   first_name: "Sindre",
   last_name: " Sorhus",
   github_username: "sindresorhus",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/170270?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/170270?s=400&v=4",
   hourly_rate: 380,
   email: "sindresorhus@gmail.com",
   password: SecureRandom.base64(15)
@@ -97,7 +97,7 @@ irish = User.create!(
   first_name: "Paulo",
   last_name: " Irish",
   github_username: "paulirish",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/39191?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/39191?s=400&v=4",
   hourly_rate: 280,
   email: "me@paulirish.com",
   password: SecureRandom.base64(15)
@@ -110,7 +110,7 @@ raval = User.create!(
   first_name: "Siraj",
   last_name: " Raval",
   github_username: "llsourcell",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/1279609?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/1279609?s=400&v=4",
   hourly_rate: 480,
   email: "sirajraval@gmail.com",
   password: SecureRandom.base64(15)
@@ -123,7 +123,7 @@ mojombo = User.create!(
   first_name: "Tom",
   last_name: " Preston-Werner",
   github_username: "mojombo",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/1?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/1?s=400&v=4",
   hourly_rate: 410,
   email: "tom@mojombo.com",
   password: SecureRandom.base64(15)
@@ -136,7 +136,7 @@ defunkt = User.create!(
   first_name: "Chris",
   last_name: " Wanstrath",
   github_username: "defunkt",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/2?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/2?s=400&v=4",
   hourly_rate: 320,
   email: "chris@github.com",
   password: SecureRandom.base64(15)
@@ -149,7 +149,7 @@ karpathy = User.create!(
   first_name: "Andrej",
   last_name: " Karpathy",
   github_username: "karpathy",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/241138?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/241138?s=400&v=4",
   hourly_rate: 290,
   email: "andrej.karpathy@gmail.com",
   password: SecureRandom.base64(15)
@@ -162,7 +162,7 @@ mbostock = User.create!(
   first_name: "Mike",
   last_name: " Bostock",
   github_username: "mbostock",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/230541?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/230541?s=400&v=4",
   hourly_rate: 220,
   email: "mike@ocks.org",
   password: SecureRandom.base64(15)
@@ -175,7 +175,7 @@ otto = User.create!(
   first_name: "Mark",
   last_name: " Otto",
   github_username: "mbostock",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/230541?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/230541?s=400&v=4",
   hourly_rate: 270,
   email: "markd.otto@gmail.com",
   password: SecureRandom.base64(15)
@@ -188,7 +188,7 @@ getify = User.create!(
   first_name: "Kyle",
   last_name: " Simpson",
   github_username: "getify",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/150330?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/150330?s=400&v=4",
   hourly_rate: 370,
   email: "getify@gmail.com",
   password: SecureRandom.base64(15)
@@ -201,7 +201,7 @@ tian = User.create!(
   first_name: "Jackson",
   last_name: " Tian",
   github_username: "jacksontian",
-  avavatar_url: "https://avatars1.githubusercontent.com/u/327019?s=400&v=4",
+  avatar_url: "https://avatars1.githubusercontent.com/u/327019?s=400&v=4",
   hourly_rate: 230,
   email: "shyvo1987@gmail.com",
   password: SecureRandom.base64(15)
@@ -214,7 +214,7 @@ jlord = User.create!(
   first_name: "Jessica",
   last_name: " Lord",
   github_username: "jlord",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/1305617?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/1305617?s=400&v=4",
   hourly_rate: 260,
   email: "jlord@gmail.com",
   password: SecureRandom.base64(15)
@@ -227,7 +227,7 @@ grider = User.create!(
   first_name: "Stephen",
   last_name: " Grider",
   github_username: "stephengrider",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/5003903?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/5003903?s=400&v=4",
   hourly_rate: 320,
   email: "stephengrider@gmail.com",
   password: SecureRandom.base64(15)
@@ -240,7 +240,7 @@ dhh = User.create!(
   first_name: "David",
   last_name: "Heinemeier Hansson",
   github_username: "dhh",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/5003903?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/5003903?s=400&v=4",
   hourly_rate: 520,
   email: "david@basecamp.com",
   password: SecureRandom.base64(15)
@@ -253,7 +253,7 @@ schacon = User.create!(
   first_name: "Scott",
   last_name: "Chacon",
   github_username: "schacon",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/70?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/70?s=400&v=4",
   hourly_rate: 320,
   email: "schacon@gmail.com",
   password: SecureRandom.base64(15)
@@ -266,7 +266,7 @@ rodloboz = User.create!(
   first_name: "Rui",
   last_name: "Freitas",
   github_username: "rodloboz",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/70?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/70?s=400&v=4",
   hourly_rate: 30,
   email: "dinnerpartysaboteur@gmail.com",
   password: SecureRandom.base64(15)
@@ -279,7 +279,7 @@ askn = User.create!(
   first_name: "Aşkın",
   last_name: "Gedik",
   github_username: "askn",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/632820?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/632820?s=400&v=4",
   hourly_rate: 210,
   email: "askngdk@gmail.com",
   password: SecureRandom.base64(15)
@@ -292,7 +292,7 @@ marceloboeira = User.create!(
   first_name: "Marcelo",
   last_name: "Boeira",
   github_username: "marceloboeira",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/1898225?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/1898225?s=400&v=4",
   hourly_rate: 170,
   email: "marceloboeira@gmail.com",
   password: SecureRandom.base64(15)
@@ -305,7 +305,7 @@ drujensen = User.create!(
   first_name: "Dru",
   last_name: "Jensen",
   github_username: "drujensen",
-  avavatar_url: "https://avatars3.githubusercontent.com/u/18718?s=400&v=4",
+  avatar_url: "https://avatars3.githubusercontent.com/u/18718?s=400&v=4",
   hourly_rate: 190,
   email: "drujensen@gmail.com",
   password: SecureRandom.base64(15)
@@ -318,7 +318,7 @@ evancz = User.create!(
   first_name: "Evan",
   last_name: "Czaplicki",
   github_username: "evancz",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/1658058?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/1658058?s=400&v=4",
   hourly_rate: 280,
   email: "evancz@gmail.com",
   password: SecureRandom.base64(15)
@@ -331,7 +331,7 @@ valim = User.create!(
   first_name: "José",
   last_name: "Valim",
   github_username: "josevalim",
-  avavatar_url: "https://avatars1.githubusercontent.com/u/9582?s=400&v=4",
+  avatar_url: "https://avatars1.githubusercontent.com/u/9582?s=400&v=4",
   hourly_rate: 380,
   email: "jose.valim@plataformatec.com.br",
   password: SecureRandom.base64(15)
@@ -344,7 +344,7 @@ tenderlove = User.create!(
   first_name: "Aaron",
   last_name: "Patterson",
   github_username: "tenderlove",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/3124?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/3124?s=400&v=4",
   hourly_rate: 330,
   email: "tenderlove@github.com",
   password: SecureRandom.base64(15)
@@ -357,7 +357,7 @@ eileencodes = User.create!(
   first_name: "Eileen",
   last_name: "M. Uchitelle",
   github_username: "eileencodes",
-  avavatar_url: "https://avatars2.githubusercontent.com/u/1080678?s=400&v=4",
+  avatar_url: "https://avatars2.githubusercontent.com/u/1080678?s=400&v=4",
   hourly_rate: 390,
   email: "contact@eileencodes.com",
   password: SecureRandom.base64(15)
@@ -370,7 +370,7 @@ excid3 = User.create!(
   first_name: "Chris",
   last_name: "Oliver",
   github_username: "excid3",
-  avavatar_url: "https://avatars1.githubusercontent.com/u/67093?s=400&v=4",
+  avatar_url: "https://avatars1.githubusercontent.com/u/67093?s=400&v=4",
   hourly_rate: 140,
   email: "contact@gorails.com",
   password: SecureRandom.base64(15)
@@ -383,7 +383,7 @@ seb = User.create!(
   first_name: "Sébastien",
   last_name: "Saunier",
   github_username: "seb@saunier.me",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/414418?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/414418?s=400&v=4",
   hourly_rate: 170,
   email: "seb@saunier.me",
   password: SecureRandom.base64(15)
@@ -396,7 +396,7 @@ boris = User.create!(
   first_name: "Boris",
   last_name: "Paillard",
   github_username: "papillard",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/2471555?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/2471555?s=400&v=4",
   hourly_rate: 60,
   email: "boris.paillard@gmail.com",
   password: SecureRandom.base64(15)
@@ -409,7 +409,7 @@ cpytel = User.create!(
   first_name: "Chad",
   last_name: "Pytel",
   github_username: "cpytel",
-  avavatar_url: "https://avatars1.githubusercontent.com/u/5015?s=400&v=4",
+  avatar_url: "https://avatars1.githubusercontent.com/u/5015?s=400&v=4",
   hourly_rate: 280,
   email: "chad@thoughtbot.com",
   password: SecureRandom.base64(15)
@@ -422,7 +422,7 @@ clayton = User.create!(
   first_name: "Joshua",
   last_name: "Clayton",
   github_username: "joshuaclayton",
-  avavatar_url: "https://avatars1.githubusercontent.com/u/1574?s=400&v=4",
+  avatar_url: "https://avatars1.githubusercontent.com/u/1574?s=400&v=4",
   hourly_rate: 220,
   email: "joshua@thoughtbot.com",
   password: SecureRandom.base64(15)
@@ -435,7 +435,7 @@ velasco = User.create!(
   first_name: "German",
   last_name: "Velasco",
   github_username: "germsvel",
-  avavatar_url: "https://avatars0.githubusercontent.com/u/3245976?s=400&v=4",
+  avatar_url: "https://avatars0.githubusercontent.com/u/3245976?s=400&v=4",
   hourly_rate: 210,
   email: "german@thoughtbot.com",
   password: SecureRandom.base64(15)
@@ -448,7 +448,7 @@ christoomey = User.create!(
   first_name: "Chris",
   last_name: "Toomey",
   github_username: "christoomey",
-  avavatar_url: "https://avatars1.githubusercontent.com/u/420113?s=400&v=4",
+  avatar_url: "https://avatars1.githubusercontent.com/u/420113?s=400&v=4",
   hourly_rate: 180,
   email: "chris@thoughtbot.com",
   password: SecureRandom.base64(15)

@@ -1,0 +1,73 @@
+.dev-wrapper {
+  padding-left: 7.5px !important;
+  padding-right: 7.5px !important;
+  @include hover-state {
+    outline: none;
+  }
+}
+
+.dev {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  background-size: cover !important;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 2px;
+  height: 270px;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.dev-avatar__name {
+  display: flex;
+  flex-direction: row;
+}
+
+.dev-link {
+  color: $text-dark;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  z-index: 10;
+  background: black;
+  opacity: 0;
+  @include hover-state {
+    text-decoration: none;
+    color: $text-dark;
+    outline: none;
+  }
+}
+
+.dev-details {
+  margin-top: 10px;
+}
+
+.dev-rate {
+  font-weight: bold;
+}
+
+.dev-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dev.skills {
+  font-weight: lighter;
+}
+
+.dev-book {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.dev-row {
+  padding: 0px 10px;
+  margin-top: 5px;
+  position:relative;
+  z-index:2;
+}
