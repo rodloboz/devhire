@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.profile-portfolio {
+  position: relative;
+}
+
 .profile {
   margin-bottom: 20px;
   box-shadow:  0 1px 7px rgba(0,0,0,.05);
@@ -72,15 +76,15 @@
   .dates {
     margin-bottom: 10px;
   }
+
   .costs {
     margin-top: 10px;
-    display: none;
     max-height: 0;
-    transition: max-height 350ms ease-in-out;
+    overflow: hidden;
+    transition: max-height 2000ms ease-in-out;
   }
 
   .costs.is-visible {
-    display: block;
     max-height: 999em;
   }
 }
@@ -100,7 +104,6 @@
 }
 
 .profile-portfolio {
-  // width: 68%;
   display: flex;
   flex-direction: row;
   overflow: hidden;

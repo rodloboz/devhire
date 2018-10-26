@@ -6,7 +6,8 @@
     "bootstrap": "3",
     "flatpickr": "^4.5.2",
     "jquery": "^3.3.1",
-    "rails-ujs": "^5.2.1"
+    "rails-ujs": "^5.2.1",
+    "typed.js": "^2.0.9"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

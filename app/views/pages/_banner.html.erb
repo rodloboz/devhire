@@ -1,7 +1,7 @@
 <div class="banner">
   <div class="banner-content">
     <h1 id="banner-text">devhire</h1>
-    <p>Discover the most skilled devs in the world</p>
+    <p>Find the most <span id="js-typed-text"></span>devs in the world</p>
       <%= form_tag(developers_path, method: "get", class: "form-inline") do %>
         <div class="form-search">
             <%= text_field_tag :q, nil, autocomplete: :off, class: "form-control search-input", placeholder: "Search by ..." %>

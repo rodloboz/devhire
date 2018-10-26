@@ -56,14 +56,13 @@ const toggleDateInputs = function() {
           if (selectedDate === '') {
             let costs = document.querySelector('.costs');
             costs.classList.remove('is-visible');
+          } else {
+            let startDate = parseDate(startDateInput.value);
+            let endDate = parseDate(endDateInput.value);
+            let hours = Math.ceil((endDate - startDate) / (1000 * 3600 * 24)) * 6;
+            calculateTotal(hours);
           }
         },
-        onClose: function(selectedDates, _, instance) {
-          let startDate = parseDate(startDateInput.value);
-          let endDate = parseDate(endDateInput.value);
-          let hours = Math.ceil((endDate - startDate) / (1000 * 3600 * 24)) * 6;
-          calculateTotal(hours);
-        }
       });
   }
 };

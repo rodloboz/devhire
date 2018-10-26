@@ -63,3 +63,19 @@
     outline: none;
   }
 }
+
+.chevron {
+  color: rgba(84,84,84, 0.6);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.chevron-right {
+  right: 20px;
+}
+
+.chevron-left {
+  left: 20px;
+}

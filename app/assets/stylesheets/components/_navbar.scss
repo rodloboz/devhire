@@ -15,14 +15,20 @@
   height: 50px;
 }
 
+.navbar-wagon-brand {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .devhire-brand {
   color: $text-dark;
   font-family: $brand-font;
   font-weight: semibold;
   font-size: 20px;
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  border-bottom: 5px solid $blue;
+  text-decoration: none;
 }
 
 /* User Avatar */
@@ -51,7 +57,7 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: $blue;
   text-decoration: none;
 }
 
