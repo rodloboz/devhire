@@ -1,13 +1,13 @@
 class BookingsController < ApplicationController
   def create
-    @user = User.find(params[:user_id])
+    @developer = Developer.find(params[:developer_id])
     @booking = Booking.new(booking_params)
-    @booking.developer = @user
-    @booking.client = current_user
+    @booking.developer = @developer
+    @booking.user = current_user
     if @booking.save
-      redirect_to users_path
+      redirect_to developers_path
     else
-      render 'users/show'
+      render 'developers/show'
     end
   end
 

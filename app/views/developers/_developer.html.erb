@@ -4,32 +4,32 @@
       <%= icon('far', 'bookmark', class: 'strong') %>
     </div>
     <div class="dev-avatar__name">
-      <%= image_tag user.avatar_url, class: "avatar-large avatar-bordered" %>
+      <%= image_tag developer.avatar_url, class: "avatar-large avatar-bordered" %>
       <div style="margin-left: 20px;">
         <div class="dev-name">
-          <%= user.full_name %>
+          <%= developer.full_name %>
         </div>
         <div class="dev-username">
           <%= icon('fab', 'github', class: 'strong') %>
-          <%= link_to user.github_username, "https://github.com/#{user.github_username}", target: "_blank", class: "dev-link" %>
+          <%= link_to developer.github_username, "https://github.com/#{developer.github_username}", target: "_blank", class: "dev-link" %>
         </div>
       </div>
     </div>
     <div class="dev-details">
       <div class="dev-row">
         Hourly Rate:
-        <span class="dev-rate">€<%= user.hourly_rate %></span>
+        <span class="dev-rate">€<%= developer.hourly_rate %></span>
       </div>
       <div class="dev-row">
         <span class="dev-skills">
-          <%= user.skills_to_s %>
+          <%= developer.skills_to_s %>
         </span>
       </div>
     </div>
     <div class="dev-book text-center">
       <%= link_to "Hire", "#", class: "btn btn-primary" %>
     </div>
-    <%= link_to user_path(user), class: "dev-profile-link" do %>
+    <%= link_to developer_path(developer), class: "dev-profile-link" do %>
     <% end %>
   </div>
 </div>
