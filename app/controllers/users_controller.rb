@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
   def index
-    @users = User.includes(:skills)
+    @users = User.includes(:skills) - [current_user]
   end
 
   def show
