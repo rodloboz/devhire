@@ -7,11 +7,11 @@
 }
 
 .dev {
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
   background-size: cover !important;
   background-color: white;
-  border: 1px solid rgba(0,0,0,0.3);
-  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,.04)!important;
+  border-radius: 4px;
   height: 270px;
   position: relative;
   padding: 20px;
@@ -23,7 +23,7 @@
   flex-direction: row;
 }
 
-.dev-link {
+.dev-profile-link {
   color: $text-dark;
   position: absolute !important;
   top: 0 !important;
@@ -38,6 +38,18 @@
     text-decoration: none;
     color: $text-dark;
     outline: none;
+  }
+}
+
+.dev-link {
+  z-index: 20;
+  text-decoration: none;
+  color: inherit;
+   position:relative;
+  z-index: 20;
+  @include hover-state {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -69,5 +81,13 @@
   padding: 0px 10px;
   margin-top: 5px;
   position:relative;
-  z-index:2;
+  // z-index:20;
+}
+
+.dev-bookmark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
 }

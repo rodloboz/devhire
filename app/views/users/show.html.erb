@@ -1,1 +1,44 @@
-show.html.erb
+<div class="container">
+  <div class="profile-wrapper">
+    <div class="profile profile-content">
+      <div class="dev-avatar__name">
+        <%= image_tag @user.avatar_url, class: "avatar-xxl avatar-bordered" %>
+        <div style="margin-left: 20px;">
+          <div class="profile-name">
+            <%= @user.full_name %>
+          </div>
+          <div class="dev-username">
+            <%= icon('fab', 'github', class: 'strong') %>
+            <%= link_to @user.github_username, "https://github.com/#{@user.github_username}", target: "_blank", class: "dev-link" %>
+          </div>
+        </div>
+      </div>
+      <div class="profile-main">
+        <div class="profile-bio">
+          <h5>About</h5>
+          <p><%= @user.bio %></p>
+        </div>
+        <div class="profile-skills">
+          <h5>Skills</h5>
+          <ul>
+            <% @user.skills.each do |skill| %>
+              <li><%= skill.titleized_name %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="profile-projects">
+          <h5>Projects</h5>
+        </div>
+      </div>
+    </div>
+    <div class="profile profile-widget">
+      <div class="widget-heading text-center">
+        Hire Now
+      </div>
+      <div class="widget-content">
+      <hr>
+      Dates
+      </div>
+    </div>
+  </div>
+</div>

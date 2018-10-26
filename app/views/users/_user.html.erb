@@ -1,5 +1,8 @@
 <div class="col-xs-12 col-sm-4">
   <div class="dev">
+    <div class="dev-bookmark">
+      <%= icon('far', 'bookmark', class: 'strong') %>
+    </div>
     <div class="dev-avatar__name">
       <%= image_tag user.avatar_url, class: "avatar-large avatar-bordered" %>
       <div style="margin-left: 20px;">
@@ -7,7 +10,8 @@
           <%= user.full_name %>
         </div>
         <div class="dev-username">
-          @<%= user.github_username %>
+          <%= icon('fab', 'github', class: 'strong') %>
+          <%= link_to user.github_username, "https://github.com/#{user.github_username}", target: "_blank", class: "dev-link" %>
         </div>
       </div>
     </div>
@@ -25,5 +29,7 @@
     <div class="dev-book text-center">
       <%= link_to "Hire", "#", class: "btn btn-primary" %>
     </div>
+    <%= link_to user_path(user), class: "dev-profile-link" do %>
+    <% end %>
   </div>
 </div>

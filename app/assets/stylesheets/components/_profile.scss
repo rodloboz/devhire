@@ -1,0 +1,67 @@
+.profile-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile {
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+  background-size: cover !important;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.04)!important;
+  border-radius: 4px;
+}
+
+.profile-content {
+  width: 70%;
+  padding: 20px;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.profile-main {
+  h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit;
+  }
+}
+
+.profile-bio {
+  margin-top: 20px;
+  p {
+    margin-left: 20px;
+  }
+}
+
+.profile-skills {
+  margin-top: 20px;
+}
+
+.profile-projects {
+  margin-top: 20px;
+}
+
+.profile-widget {
+  margin-left: 20px;
+  width: 30%;
+
+  height: 200px;
+}
+
+.widget-heading {
+  width: 100%;
+  background: $blue;
+  padding: 20px;
+  color: white;
+}
+
+.widget-content {
+  width: 100%;
+  padding: 20px;
+}
