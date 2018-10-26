@@ -5,6 +5,10 @@ class Developer < ApplicationRecord
 
   default_scope { order(hourly_rate: :desc) }
 
+  def self.find_by_skill(skill)
+    joins(:skills).where('skills.name': skill)
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end

@@ -1,7 +1,9 @@
 <div class="col-xs-12 col-sm-4">
-  <div class="dev">
+  <div id="dev-<%= developer.id %>" class="dev">
     <div class="dev-bookmark">
-      <%= icon('far', 'bookmark', class: 'strong') %>
+      <% if user_signed_in?  %>
+        <%= icon(current_user.bookmarked?(developer) ? "fas" : "far" , "bookmark") %>
+      <% end %>
     </div>
     <div class="dev-avatar__name">
       <%= image_tag developer.avatar_url, class: "avatar-large avatar-bordered" %>

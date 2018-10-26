@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :developers, only: [:index, :show] do
     resources :bookings, only: [:create]
+    collection do
+      get :bookmarked
+    end
   end
 
+  resources :bookmarked_developers, only: [:create, :destroy]
 end
