@@ -3,23 +3,23 @@
     <div class="form-inputs">
       <div class="form-row">
         <%= f.input :start_date, as: :string, label: "Dates", placeholder: "Start date", wrapper_html: { class: "inline_field_wrapper" } %>
-        <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "End date", wrapper_html: { class: "inline_field_wrapper" } %>
+        <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "End date", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
       </div>
     </div>
   </div>
-  <div class="costs costs-hidden">
+  <div class="costs costs-hidden" data-rate="<%= @developer.hourly_rate.to_json %>">
     <table class="table">
       <tr>
-        <td>€126 x 16 hours</td>
-        <td class="text-right">€2,016</td>
+        <td>€<%= @developer.hourly_rate %> x <span id="hours">0</span> hours</td>
+        <td class="text-right">€<span id="price">0</span></td>
       </tr>
       <tr>
         <td>Service fee</td>
-        <td class="text-right">€201.6</td>
+        <td class="text-right">€<span id="service-fee">0</span></td>
       </tr>
       <tr>
         <td><strong>Total</strong></td>
-        <td class="text-right">€2,217.6</td>
+        <td class="text-right">€<span id=total-price>0</span></td>
       </tr>
     </table>
   </div>

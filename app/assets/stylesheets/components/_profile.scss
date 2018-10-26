@@ -74,6 +74,14 @@
   }
   .costs {
     margin-top: 10px;
+    display: none;
+    max-height: 0;
+    transition: max-height 350ms ease-in-out;
+  }
+
+  .costs.is-visible {
+    display: block;
+    max-height: 999em;
   }
 }
 
