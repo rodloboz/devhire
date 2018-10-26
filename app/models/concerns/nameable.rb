@@ -4,7 +4,7 @@ module Nameable
   included do
     before_save :downcase_name
 
-    validates :name, uniqueness: { case_sensitive: false }, presence: true
+    # validates :name, uniqueness: { case_sensitive: false }, presence: true
 
     def downcase_name
       name.downcase!

@@ -1,0 +1,65 @@
+.project-wrapper {
+  margin-bottom: 20px;
+  padding-left: 7.5px !important;
+  padding-right: 7.5px !important;
+  @include hover-state {
+    outline: none;
+  }
+}
+
+.project {
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+  background-size: cover !important;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.04)!important;
+  border-radius: 4px;
+  height: 600px;
+  width: 500px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.project-details {
+  margin-top: 10px;
+}
+
+.project-rate {
+  font-weight: bold;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.project-stack {
+  font-weight: lighter;
+}
+
+.project-details {
+  padding: 10px;
+}
+
+.project-book {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.project-row {
+  margin-top: 5px;
+  position:relative;
+}
+
+.project-image {
+  position: relative;
+  height: 72%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include hover-state {
+    outline: none;
+  }
+}

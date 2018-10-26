@@ -1,0 +1,22 @@
+<div id="project-<%= project.id %>">
+  <div class="project">
+
+      <!-- Project Image -->
+      <div class="project-image" style="background-image: url(<%= project.photo %>);">
+      </div>
+
+      <!-- Project Bottom Row (Name, Stack, Description)  -->
+      <div class="project-details">
+        <div class="project-row">
+          <span class="project-name"><%= project.titleized_name %></span>
+        </div>
+        <div class="project-row">
+          <span class="project-stack"><%= project.stack %></span>
+        </div>
+        <div class="project-row">
+          <div class="project-description"><%= truncate project.description, length: 150 %></div>
+        </div>
+      </div>
+
+  </div>
+</div>

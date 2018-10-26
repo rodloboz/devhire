@@ -28,3 +28,14 @@
 input:disabled {
   cursor: not-allowed !important;
 }
+
+.form-search {
+  display: flex;
+  flex-direction: row;
+  .search-input {
+    padding: 20px;
+    color: $text-dark;
+    background: white;
+    flex: 1;
+  }
+}

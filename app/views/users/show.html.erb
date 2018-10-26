@@ -26,10 +26,15 @@
             <% end %>
           </ul>
         </div>
-        <div class="profile-projects">
-          <h5>Projects</h5>
-        </div>
       </div>
+    </div>
+    <div class="profile-wrapper">
+      <div class="profile profile-content profile-projects">
+        <h5>Portfolio</h5>
+      </div>
+    </div>
+    <div class="profile-portfolio">
+      <%= render @user.projects %>
     </div>
     <div class="profile profile-widget">
       <div class="widget-heading text-center">

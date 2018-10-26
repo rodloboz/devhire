@@ -1,6 +1,7 @@
 require 'securerandom'
 
 puts "Cleaning up database..."
+Project.destroy_all
 Skill.destroy_all
 User.destroy_all
 
@@ -491,8 +492,42 @@ christoomey = User.create!(
 end
 puts "Created #{User.count} users!"
 
+puts "Creating projects..."
+User.find_each do |user|
+  Project.create!(
+    user: user,
+    name: "Quicky Forecast",
+    stack: "Ruby | Ruby on Rails | Javascript | React",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540565710/case-projects/quicky-forecast-02.png",
+    description: "Quicky Forecast removes this illusion of activity, by offering a UI that promotes simplicity and transparency. In just a glance, the entire team is allowed to understand the sales forecast situation, see what's closed, what's forecasted and when. Rather than just generating sales forecasts weekly or monthly, Quicky Forecast is always available and ready."
+  )
 
+  Project.create!(
+    user: user,
+    name: " GasBuddy",
+    stack: "Swift | Objective C",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540565717/case-projects/gasbuddy-01.jpg",
+    description: "With a rebrand in progress to support this new future, we worked with GasBuddy to improve their existing iOS and Android apps’ interface and user experience to bring them into the modern age of mobile design, and find a new system that would allow new features to be added logically."
+  )
 
+  Project.create!(
+    user: user,
+    name: " Joydrive",
+    stack: "Elixir | Phoenix",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540565712/case-projects/joydrive-01.jpg",
+    description: "Joydrive reduces the stress of purchasing a car by providing customers a hassle-free online storefront where they can browse multiple dealers for new and used cars, get immediate Kelly Blue Book trade-in value, and have cars picked up and delivered right to their front door all in a single app. ."
+  )
+
+  Project.create!(
+    user: user,
+    name: " Escate the City",
+    stack: "Ruby | Ruby on Rails",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540574889/case-projects/escapethecity.png",
+    description: "Escape the City had an old site based on PHP. In order to raise funding and accelerate the business growth, they urgently needed a higher quality technology platform that would help gain traction with users."
+  )
+end
+
+puts "Seeding completed!"
 
 
 

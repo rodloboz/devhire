@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'banner' %>
+
+<section id="section-one">
+  <div class="home-icons">
+    <div class="features text-center">
+      <%= icon('fas', 'code') %>
+      <h4>TECHNOLOGY</h4>
+      <p>Search developers by programming language.</p>
+    </div>
+    <div class="features text-center">
+      <%= icon('fas', 'pencil-alt') %>
+      <h4>DESIGN</h4>
+      <p>Flesh out your idea in design iterations.</p>
+    </div>
+    <div class="features text-center">
+      <%= icon('fas', 'sitemap') %>
+      <h4>BUILD</h4>
+      <p>Build powerful applications with your selected team.</p>
+    </div>
+  </div>
+</section>
+<section id="section-two">
+  <div class="container">
+    <h4>Devs</h4>
+    <div class="row">
+      <%= render @users %>
+    </div>
+  </div>
+</section>
+
