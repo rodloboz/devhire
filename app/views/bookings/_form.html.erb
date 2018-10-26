@@ -1,0 +1,29 @@
+<%= simple_form_for([@user, @booking]) do |f| %>
+  <div class="dates">
+    <div class="form-inputs">
+      <div class="form-row">
+        <%= f.input :start_date, as: :string, label: "Dates", placeholder: "Start date", wrapper_html: { class: "inline_field_wrapper" } %>
+        <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "End date", wrapper_html: { class: "inline_field_wrapper" } %>
+      </div>
+    </div>
+  </div>
+  <div class="costs">
+    <table class="table">
+      <tr>
+        <td>€126 x 16 hours</td>
+        <td class="text-right">€2,016</td>
+      </tr>
+      <tr>
+        <td>Service fee</td>
+        <td class="text-right">€201.6</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td class="text-right">€2,217.6</td>
+      </tr>
+    </table>
+  </div>
+  <div class="form-row">
+    <%= f.submit "book", class: "btn btn-primary btn-lg btn-fullwidth btn-booking" %>
+  </div>
+<% end %>

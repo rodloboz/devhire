@@ -1,11 +1,9 @@
 .profile-wrapper {
   margin-top: 20px;
-  display: flex;
-  flex-direction: row;
+  position: relative;
 }
 
 .profile {
-  position: relative;
   margin-bottom: 20px;
   box-shadow:  0 1px 7px rgba(0,0,0,.05);
   background-size: cover !important;
@@ -15,7 +13,8 @@
 }
 
 .profile-content {
-  width: 70%;
+  position: relative;
+  width: 68%;
   padding: 20px;
 }
 
@@ -48,20 +47,41 @@
 }
 
 .profile-widget {
-  margin-left: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 30%;
-
-  height: 200px;
+  min-height: 250px;
 }
 
 .widget-heading {
   width: 100%;
   background: $blue;
-  padding: 20px;
-  color: white;
+  padding: 30px;
+  position: relative;
 }
 
 .widget-content {
   width: 100%;
   padding: 20px;
+  .dates {
+    margin-bottom: 10px;
+  }
+  .costs {
+    margin-top: 10px;
+  }
+}
+
+.hourly-rate {
+  position: absolute;
+  left: 20px;
+  transform: translate(0,-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  span {
+    font-size: 14px;
+    font-weight: light;
+    font-variant: small-caps;
+  }
 }

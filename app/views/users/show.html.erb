@@ -33,11 +33,15 @@
     </div>
     <div class="profile profile-widget">
       <div class="widget-heading text-center">
-        Hire Now
+        <div class="hourly-rate">
+          €<%= @user.hourly_rate %><span>/hour</span></%>
+        </div>
       </div>
       <div class="widget-content">
       <hr>
-      Dates
+        <div class="dates">
+          <%= render "bookings/form" %>
+        </div>
       </div>
     </div>
   </div>
