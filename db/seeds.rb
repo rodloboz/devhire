@@ -21,7 +21,7 @@ skills.each { |s| Skill.create!(name: s) }
 puts "Created #{Skill.count} skills!"
 
 puts "Creating developers..."
-torvalds = Developer.create!(
+torvalds = Developer.new(
   first_name: "Linus",
   last_name: "Torvalds",
   github_username: "torvalds",
@@ -32,8 +32,9 @@ torvalds = Developer.create!(
 %w(c c++).each do |s|
   torvalds.skills << Skill.find_by_name(s)
 end
+torvalds.save!
 
-wharton = Developer.create!(
+wharton = Developer.new(
   first_name: "Jake",
   last_name: "Wharton",
   github_username: "jakewharton",
@@ -44,8 +45,9 @@ wharton = Developer.create!(
 %w(kotlin java html javascript css).each do |s|
   wharton.skills << Skill.find_by_name(s)
 end
+wharton.save!
 
-evan = Developer.create!(
+evan = Developer.new(
   first_name: "Evan",
   last_name: "You",
   github_username: "yyx990803",
@@ -56,8 +58,9 @@ evan = Developer.create!(
 %w(javascript vue html css php python).each do |s|
   evan.skills << Skill.find_by_name(s)
 end
+evan.save!
 
-tj = Developer.create!(
+tj = Developer.new(
   first_name: "TJ",
   last_name: " Holowaychuk",
   github_username: "tj",
@@ -68,8 +71,9 @@ tj = Developer.create!(
 %w(javascript go html).each do |s|
   tj.skills << Skill.find_by_name(s)
 end
+tj.save!
 
-abramov = Developer.create!(
+abramov = Developer.new(
   first_name: "Dan",
   last_name: " Abramov",
   github_username: "gaearon",
@@ -80,8 +84,9 @@ abramov = Developer.create!(
 %w(javascript react css html).each do |s|
   abramov.skills << Skill.find_by_name(s)
 end
+abramov.save!
 
-sindresorhus = Developer.create!(
+sindresorhus = Developer.new(
   first_name: "Sindre",
   last_name: " Sorhus",
   github_username: "sindresorhus",
@@ -92,8 +97,9 @@ sindresorhus = Developer.create!(
 %w(javascript swift node.js typescript css html).each do |s|
   sindresorhus.skills << Skill.find_by_name(s)
 end
+sindresorhus.save!
 
-irish = Developer.create!(
+irish = Developer.new(
   first_name: "Paul",
   last_name: " Irish",
   github_username: "paulirish",
@@ -104,8 +110,9 @@ irish = Developer.create!(
 %w(javascript perl css html).each do |s|
   irish.skills << Skill.find_by_name(s)
 end
+irish.save!
 
-raval = Developer.create!(
+raval = Developer.new(
   first_name: "Siraj",
   last_name: " Raval",
   github_username: "llsourcell",
@@ -116,8 +123,9 @@ raval = Developer.create!(
 %w(python).each do |s|
   raval.skills << Skill.find_by_name(s)
 end
+raval.save!
 
-mojombo = Developer.create!(
+mojombo = Developer.new(
   first_name: "Tom",
   last_name: " Preston-Werner",
   github_username: "mojombo",
@@ -128,8 +136,9 @@ mojombo = Developer.create!(
 %w(ruby javascript perl go erlang css html r).each do |s|
   mojombo.skills << Skill.find_by_name(s)
 end
+mojombo.save!
 
-defunkt = Developer.create!(
+defunkt = Developer.new(
   first_name: "Chris",
   last_name: " Wanstrath",
   github_username: "defunkt",
@@ -140,8 +149,9 @@ defunkt = Developer.create!(
 %w(ruby javascript coffeescript python c).each do |s|
   defunkt.skills << Skill.find_by_name(s)
 end
+defunkt.save!
 
-karpathy = Developer.create!(
+karpathy = Developer.new(
   first_name: "Andrej",
   last_name: " Karpathy",
   github_username: "karpathy",
@@ -152,8 +162,9 @@ karpathy = Developer.create!(
 %w(python html css lua javascript c++).each do |s|
   karpathy.skills << Skill.find_by_name(s)
 end
+karpathy.save!
 
-mbostock = Developer.create!(
+mbostock = Developer.new(
   first_name: "Mike",
   last_name: " Bostock",
   github_username: "mbostock",
@@ -164,8 +175,9 @@ mbostock = Developer.create!(
 %w(javascript html css).each do |s|
   mbostock.skills << Skill.find_by_name(s)
 end
+mbostock.save!
 
-otto = Developer.create!(
+otto = Developer.new(
   first_name: "Mark",
   last_name: " Otto",
   github_username: "mdo",
@@ -176,8 +188,9 @@ otto = Developer.create!(
 %w(html css javascript).each do |s|
   otto.skills << Skill.find_by_name(s)
 end
+otto.save!
 
-getify = Developer.create!(
+getify = Developer.new(
   first_name: "Kyle",
   last_name: " Simpson",
   github_username: "getify",
@@ -188,8 +201,9 @@ getify = Developer.create!(
 %w(javascript).each do |s|
   getify.skills << Skill.find_by_name(s)
 end
+getify.save!
 
-tian = Developer.create!(
+tian = Developer.new(
   first_name: "Jackson",
   last_name: " Tian",
   github_username: "jacksontian",
@@ -200,8 +214,9 @@ tian = Developer.create!(
 %w(javascript css html perl c++ c).each do |s|
   tian.skills << Skill.find_by_name(s)
 end
+tian.save!
 
-jlord = Developer.create!(
+jlord = Developer.new(
   first_name: "Jessica",
   last_name: " Lord",
   github_username: "jlord",
@@ -212,8 +227,9 @@ jlord = Developer.create!(
 %w(javascript css html node.js).each do |s|
   jlord.skills << Skill.find_by_name(s)
 end
+jlord.save!
 
-grider = Developer.create!(
+grider = Developer.new(
   first_name: "Stephen",
   last_name: " Grider",
   github_username: "stephengrider",
@@ -224,8 +240,9 @@ grider = Developer.create!(
 %w(javascript css html elixir react node.js vue).each do |s|
   grider.skills << Skill.find_by_name(s)
 end
+grider.save!
 
-dhh = Developer.create!(
+dhh = Developer.new(
   first_name: "David",
   last_name: "Heinemeier Hansson",
   github_username: "dhh",
@@ -236,8 +253,9 @@ dhh = Developer.create!(
 %w(ruby ruby\ on\ rails javascript coffeescript).each do |s|
   dhh.skills << Skill.find_by_name(s)
 end
+dhh.save!
 
-schacon = Developer.create!(
+schacon = Developer.new(
   first_name: "Scott",
   last_name: "Chacon",
   github_username: "schacon",
@@ -248,8 +266,9 @@ schacon = Developer.create!(
 %w(ruby javascript c python coffeescript).each do |s|
   schacon.skills << Skill.find_by_name(s)
 end
+schacon.save!
 
-rodloboz = Developer.create!(
+rodloboz = Developer.new(
   first_name: "Rui",
   last_name: "Freitas",
   github_username: "rodloboz",
@@ -260,8 +279,9 @@ rodloboz = Developer.create!(
 %w(ruby ruby\ on\ rails javascript react vue elixir phoenix crystal).each do |s|
   rodloboz.skills << Skill.find_by_name(s)
 end
+rodloboz.save!
 
-askn = Developer.create!(
+askn = Developer.new(
   first_name: "Aşkın",
   last_name: "Gedik",
   github_username: "askn",
@@ -272,8 +292,9 @@ askn = Developer.create!(
 %w(crystal ruby go ruby\ on\ rails).each do |s|
   askn.skills << Skill.find_by_name(s)
 end
+askn.save!
 
-marceloboeira = Developer.create!(
+marceloboeira = Developer.new(
   first_name: "Marcelo",
   last_name: "Boeira",
   github_username: "marceloboeira",
@@ -284,8 +305,9 @@ marceloboeira = Developer.create!(
 %w(crystal python haskell scala go c swift rust vue).each do |s|
   marceloboeira.skills << Skill.find_by_name(s)
 end
+marceloboeira.save!
 
-drujensen = Developer.create!(
+drujensen = Developer.new(
   first_name: "Dru",
   last_name: "Jensen",
   github_username: "drujensen",
@@ -296,8 +318,9 @@ drujensen = Developer.create!(
 %w(ruby php crystal javascript).each do |s|
   drujensen.skills << Skill.find_by_name(s)
 end
+drujensen.save!
 
-evancz = Developer.create!(
+evancz = Developer.new(
   first_name: "Evan",
   last_name: "Czaplicki",
   github_username: "evancz",
@@ -308,8 +331,9 @@ evancz = Developer.create!(
 %w(haskell elm javascript html).each do |s|
   evancz.skills << Skill.find_by_name(s)
 end
+evancz.save!
 
-valim = Developer.create!(
+valim = Developer.new(
   first_name: "José",
   last_name: "Valim",
   github_username: "josevalim",
@@ -320,8 +344,9 @@ valim = Developer.create!(
 %w(elixir erlang ruby ruby\ on\ rails c c#).each do |s|
   valim.skills << Skill.find_by_name(s)
 end
+valim.save!
 
-tenderlove = Developer.create!(
+tenderlove = Developer.new(
   first_name: "Aaron",
   last_name: "Patterson",
   github_username: "tenderlove",
@@ -332,8 +357,9 @@ tenderlove = Developer.create!(
 %w(ruby ruby\ on\ rails c c++).each do |s|
   tenderlove.skills << Skill.find_by_name(s)
 end
+tenderlove.save!
 
-eileencodes = Developer.create!(
+eileencodes = Developer.new(
   first_name: "Eileen",
   last_name: "M. Uchitelle",
   github_username: "eileencodes",
@@ -344,8 +370,9 @@ eileencodes = Developer.create!(
 %w(ruby ruby\ on\ rails c swift javascript go).each do |s|
   eileencodes.skills << Skill.find_by_name(s)
 end
+eileencodes.save!
 
-excid3 = Developer.create!(
+excid3 = Developer.new(
   first_name: "Chris",
   last_name: "Oliver",
   github_username: "excid3",
@@ -356,8 +383,9 @@ excid3 = Developer.create!(
 %w(ruby ruby\ on\ rails python javascript c++).each do |s|
   excid3.skills << Skill.find_by_name(s)
 end
+excid3.save!
 
-seb = Developer.create!(
+seb = Developer.new(
   first_name: "Sébastien",
   last_name: "Saunier",
   github_username: "seb@saunier.me",
@@ -368,8 +396,9 @@ seb = Developer.create!(
 %w(ruby ruby\ on\ rails css html javascript react).each do |s|
   seb.skills << Skill.find_by_name(s)
 end
+seb.save!
 
-boris = Developer.create!(
+boris = Developer.new(
   first_name: "Boris",
   last_name: "Paillard",
   github_username: "papillard",
@@ -380,8 +409,9 @@ boris = Developer.create!(
 %w(html css).each do |s|
   boris.skills << Skill.find_by_name(s)
 end
+boris.save!
 
-cpytel = Developer.create!(
+cpytel = Developer.new(
   first_name: "Chad",
   last_name: "Pytel",
   github_username: "cpytel",
@@ -392,8 +422,9 @@ cpytel = Developer.create!(
 %w(html css ruby swift ruby\ on\ rails javascript).each do |s|
   cpytel.skills << Skill.find_by_name(s)
 end
+cpytel.save!
 
-clayton = Developer.create!(
+clayton = Developer.new(
   first_name: "Joshua",
   last_name: "Clayton",
   github_username: "joshuaclayton",
@@ -404,8 +435,9 @@ clayton = Developer.create!(
 %w(ruby elm haskell javascript swift ruby\ on\ rails elixir phoenix).each do |s|
   clayton.skills << Skill.find_by_name(s)
 end
+clayton.save!
 
-velasco = Developer.create!(
+velasco = Developer.new(
   first_name: "German",
   last_name: "Velasco",
   github_username: "germsvel",
@@ -416,8 +448,9 @@ velasco = Developer.create!(
 %w(ruby ruby\ on\ rails elixir python css html).each do |s|
   velasco.skills << Skill.find_by_name(s)
 end
+velasco.save!
 
-christoomey = Developer.create!(
+christoomey = Developer.new(
   first_name: "Chris",
   last_name: "Toomey",
   github_username: "christoomey",
@@ -428,6 +461,8 @@ christoomey = Developer.create!(
 %w(ruby ruby\ on\ rails javascript react haskell scala elm python).each do |s|
   christoomey.skills << Skill.find_by_name(s)
 end
+christoomey.save!
+
 puts "Created #{Developer.count} developers!"
 
 puts "Creating projects..."
