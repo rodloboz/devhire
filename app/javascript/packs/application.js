@@ -21,9 +21,5 @@ if (devIndexPage) {
   toggleIcons();
 }
 
-const devShowPage = document.querySelector('.developers.show');
-if (devShowPage) {
-  initSlider();
-}
-
+initSlider();
 toggleDateInputs();
