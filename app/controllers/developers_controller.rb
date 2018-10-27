@@ -16,6 +16,10 @@ class DevelopersController < ApplicationController
     @developers = current_user.bookmarked_developers
   end
 
+  def autocomplete
+    render json: {}
+  end
+
   private
 
   def set_developer

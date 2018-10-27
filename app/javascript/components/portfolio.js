@@ -15,7 +15,7 @@ const initSlider = function() {
       mouseDrag: true,
       arrowKeys: true,
       controls: false,
-      nav: false
+      nav: false,
     });
 
    nextBtn.onclick = function () { slider.goTo('next'); };
