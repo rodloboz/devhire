@@ -1,7 +1,5 @@
 /* Main navbar */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -19,6 +17,7 @@
   &:hover {
     text-decoration: none;
   }
+
 }
 
 .devhire-brand {
@@ -52,6 +51,10 @@
 }
 
 /* Navbar link */
+.navbar-transparent .navbar-wagon-link {
+  color: white;
+}
+
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
@@ -90,4 +93,18 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.navbar-wagon-filled {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background-color: white;
+}
+
+.navbar-wagon-transparent {
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+
+  .devhire-brand, .navbar-wagon-link {
+    color: white;
+  }
 }

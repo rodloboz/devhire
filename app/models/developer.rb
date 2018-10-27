@@ -2,11 +2,16 @@ class Developer < ApplicationRecord
   has_many :developer_skills, dependent: :destroy
   has_many :skills, through: :developer_skills
   has_many :projects
+  has_many :bookings
 
   default_scope { order(hourly_rate: :desc) }
 
   def self.find_by_skill(skill)
     joins(:skills).where('skills.name': skill)
+  end
+
+  def self.top_6
+    reorder(bookings_count: :desc, hourly_rate: :desc).limit(6)
   end
 
   def full_name
