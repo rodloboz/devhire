@@ -1,6 +1,6 @@
 class DevelopersController < ApplicationController
-  skip_before_action :authenticate_user!
-  before_action :set_developer, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_developer, only: [:show, :edit, :update]
 
   def index
     query = params[:q]
@@ -9,7 +9,38 @@ class DevelopersController < ApplicationController
   end
 
   def show
+    if current_user.profile == @developer
+      redirect_to profile_path
+    end
     @booking = Booking.new
+  end
+
+  def new
+    if current_user.has_profile?
+      redirect_to profile_path
+    end
+    @developer = Developer.new
+  end
+
+  def create
+    @developer = Developer.new(developer_params)
+    @developer.user = current_user
+    if @developer.save
+      redirect_to profile_path
+    else
+      render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @developer.update(developer_params)
+      redirect_to @developer
+    else
+      render :edit
+    end
   end
 
   def bookmarked
@@ -20,5 +51,12 @@ class DevelopersController < ApplicationController
 
   def set_developer
     @developer = Developer.find(params[:id])
+  end
+
+  def developer_params
+    params.require(:developer).permit(
+      :fist_name, :last_name, :github_username,
+      :avatar_url, :bio, :hourly_rate
+    )
   end
 end

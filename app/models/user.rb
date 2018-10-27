@@ -6,8 +6,13 @@ class User < ApplicationRecord
 
   has_many :bookmarks
   has_many :bookmarked_developers, through: :bookmarks, source: :bookmarked, source_type: 'Developer'
+  has_one :profile, class_name: 'Developer'
 
   def bookmarked?(developer)
     bookmarked_developers.any? { |d| d.id == developer.id }
+  end
+
+  def has_profile?
+    profile.present?
   end
 end

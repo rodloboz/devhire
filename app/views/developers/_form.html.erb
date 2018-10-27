@@ -1,0 +1,10 @@
+<%= simple_form_for @developer do |f| %>
+  <%= f.input :first_name, autofocus: true %>
+  <%= f.input :last_name %>
+  <%= f.input :github_username %>
+  <%= f.input :avatar_url %>
+  <%= f.input :bio %>
+  <%= f.input :hourly_rate %>
+  <%= f.submit "Save", class: "btn btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-danger" %>
+<% end %>

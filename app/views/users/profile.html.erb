@@ -1,4 +1,5 @@
 <div class="container">
+  <h4>Your developer's profile:</h4>
   <div class="profile-wrapper">
     <div class="profile profile-content">
       <div class="dev-avatar__name">
@@ -47,19 +48,5 @@
         </div>
       </div>
     <% end %>
-
-    <div class="profile profile-widget">
-      <div class="widget-heading text-center">
-        <div class="hourly-rate">
-          €<%= @developer.hourly_rate %><span>/hour</span></%>
-        </div>
-      </div>
-      <div class="widget-content">
-      <hr>
-        <div class="dates">
-          <%= render "bookings/form" %>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

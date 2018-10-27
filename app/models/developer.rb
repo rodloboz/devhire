@@ -1,4 +1,5 @@
 class Developer < ApplicationRecord
+  belongs_to :user, optional: true
   has_many :developer_skills, dependent: :destroy
   has_many :skills, through: :developer_skills
   has_many :projects

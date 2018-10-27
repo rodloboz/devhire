@@ -10,7 +10,11 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <% if current_user.profile.present? %>
+        <%= link_to "Profile", profile_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% else %>
+        <%= link_to "Become a Developer", new_developer_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
       <%= link_to "Bookmarks", bookmarked_developers_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 

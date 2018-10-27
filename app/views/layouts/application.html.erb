@@ -10,8 +10,7 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <%= render 'shared/navbar' unless devise_controller? %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
