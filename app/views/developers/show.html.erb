@@ -34,7 +34,9 @@
       </div>
     </div>
     <div class="profile-portfolio">
-      <%= render @developer.projects %>
+      <div id="js-projects">
+        <%= render @developer.projects %>
+      </div>
       <div class="chevron chevron-right">
         <%= icon('fas', 'chevron-right') %>
       </div>

@@ -5407,6 +5407,10 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
+tiny-slider@^2.8.7:
+  version "2.8.7"
+  resolved "https://registry.yarnpkg.com/tiny-slider/-/tiny-slider-2.8.7.tgz#da6b65fa197ec7d57493c248b57d3f5fd79b8239"
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
