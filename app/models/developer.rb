@@ -7,7 +7,7 @@ class Developer < ApplicationRecord
   default_scope { order(hourly_rate: :desc) }
 
   def self.find_by_skill(skill)
-    joins(:skills).where('skills.name': skill)
+    joins(:skills).where("skills.name ILIKE ?", "%#{skill}%")
   end
 
   def self.top_6

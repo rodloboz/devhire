@@ -5,12 +5,14 @@ import { toggleDateInputs } from '../components/booking';
 import { loadDynamicBannerText } from '../components/banner';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initSlider } from '../components/portfolio';
+import { autocompleteSearch } from '../components/autocomplete';
 
 const homePage = document.querySelector('.pages.home');
 if (homePage) {
   loadDynamicBannerText();
   initUpdateNavbarOnScroll();
   toggleIcons();
+  autocompleteSearch();
 }
 
 const devIndexPage = document.querySelector('.developers.index');
