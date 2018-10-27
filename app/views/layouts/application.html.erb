@@ -11,7 +11,10 @@
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
     <%= render 'shared/navbar' unless devise_controller? %>
-    <%= yield %>
+    <div class="page-wrapper">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' unless devise_controller? %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
