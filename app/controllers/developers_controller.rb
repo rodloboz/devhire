@@ -9,7 +9,7 @@ class DevelopersController < ApplicationController
   end
 
   def show
-    if current_user.profile == @developer
+    if current_user && current_user.profile == @developer
       redirect_to profile_path
     end
     @booking = Booking.new
@@ -25,7 +25,6 @@ class DevelopersController < ApplicationController
   def create
     @developer = Developer.new(developer_params)
     @developer.user = current_user
-    byebug
     if @developer.save
       redirect_to profile_path
     else
