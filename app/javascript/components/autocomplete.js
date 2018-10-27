@@ -12,7 +12,7 @@ const autocompleteSearch = function() {
   if (skills && searchInput) {
     new autocomplete({
       selector: searchInput,
-      minChars: 2,
+      minChars: 1,
       source: function(term, suggest){
           term = term.toLowerCase();
           const choices = skills;

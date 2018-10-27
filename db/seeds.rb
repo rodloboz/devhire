@@ -7,11 +7,16 @@ Developer.destroy_all
 
 puts "Creating skills..."
 skills = [ "ruby", "ruby on rails", "javascript", "react",
-  "vue", "python", "c", "c++", "c#", "node.js", "php",
+  "vue", "python", "c", "clojure", "objective-c", "c++",
+  "c#", "node.js", "php", "nim", "julia", "lisp", "pascal",
   "java", "kotlin", "html", "css", "laravel", "go", "r",
   "typescript", "lua", "coffeescript", "elixir", "phoenix",
   "django", "haskell", "scala", "swift", "crystal",
-  "erlang", "rust", "elm", "perl"]
+  "erlang", "rust", "elm", "perl", "cobol", "dart",
+  "fortran", "sass", "slim", "matlab", "solidity", "sql",
+  "unity", "visual basic", "web assembly", "angular",
+  "backbone", "ember", "expressjs", "knockoutjs", "meteor",
+  "kepler", "play", "lift", "drupal", "symfony", "sinatra" ]
 skills.each { |s| Skill.create!(name: s) }
 puts "Created #{Skill.count} skills!"
 
@@ -163,8 +168,8 @@ end
 otto = Developer.create!(
   first_name: "Mark",
   last_name: " Otto",
-  github_username: "mbostock",
-  avatar_url: "https://avatars2.githubusercontent.com/u/230541?s=400&v=4",
+  github_username: "mdo",
+  avatar_url: "https://avatars1.githubusercontent.com/u/98681?s=400&v=4",
   hourly_rate: 270,
   bio: "Senior Director of Design at GitHub. Creator of Bootstrap. Previously at Twitter. Huge nerd"
 )
@@ -453,10 +458,34 @@ Developer.find_each do |developer|
 
   Project.create!(
     developer: developer,
-    name: " Escate the City",
+    name: "Escate the City",
     stack: "Ruby | Ruby on Rails",
     photo: "https://res.cloudinary.com/opratododia/image/upload/v1540574889/case-projects/escapethecity.png",
     description: "Escape the City had an old site based on PHP. In order to raise funding and accelerate the business growth, they urgently needed a higher quality technology platform that would help gain traction with users."
+  )
+
+  Project.create!(
+    developer: developer,
+    name: "Easyteach",
+    stack: "Ruby | Ruby on Rails | Saas | React",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540629385/case-projects/easytech.jpg",
+    description: "Easytech's mission is to design and develop medical devices conceived for a full recovery of physical and motor abilities of every person. The working philosophy developed by Easytech aims at developing technologies designed to provide the best possible benefits to operators."
+  )
+
+  Project.create!(
+    developer: developer,
+    name: "Limoney",
+    stack: "Ruby | Ruby on Rails | Saas | CoffeeScript",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540629387/case-projects/limoney.jpg",
+    description: "Easytech's mission is to design and develop medical devices conceived for a full recovery of physical and motor abilities of every person. The working philosophy developed by Easytech aims at developing technologies designed to provide the best possible benefits to operators."
+  )
+
+  Project.create!(
+    developer: developer,
+    name: "Lepori",
+    stack: "Ruby | Ruby on Rails",
+    photo: "https://res.cloudinary.com/opratododia/image/upload/v1540629567/case-projects/lepori.jpg",
+    description: "Indios shoes was established in 1956 and, along the years, it has specialized in the production of mocassins. We have built their website and the online store with ruby on rails and spree ecommerce."
   )
 end
 
