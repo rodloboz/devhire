@@ -2,6 +2,11 @@
   <h4>Your developer's profile:</h4>
   <div class="profile-wrapper">
     <div class="profile profile-content">
+      <div class="profile-tools">
+        <%= link_to edit_developer_path(@developer) do %>
+          <%= icon('fas', 'user-edit', class: 'strong') %>
+        <% end %>
+      </div>
       <div class="dev-avatar__name">
         <%= image_tag avatar_url(@developer), class: "avatar-xxl avatar-bordered" %>
         <div style="margin-left: 20px;">

@@ -101,10 +101,21 @@
 
 .profile-portfolio {
   position: relative;
-  // display: flex;
-  // flex-direction: row;
-  // overflow: hidden;
-  // div {
-  //   margin-right: 10px;
-  // }
+}
+
+.profile-tools {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  a {
+    color: inherit;
+  }
+  i {
+    opacity: 0.15;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

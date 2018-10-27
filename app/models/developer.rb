@@ -14,6 +14,10 @@ class Developer < ApplicationRecord
     joins(:skills).where("skills.name ILIKE ?", "%#{skill}%")
   end
 
+  def self.find_by_price_range(min, max)
+    where("hourly_rate >= ? AND hourly_rate <= ?", min, max)
+  end
+
   def self.top_6
     reorder(bookings_count: :desc, hourly_rate: :desc).limit(6)
   end
