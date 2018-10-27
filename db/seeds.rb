@@ -11,11 +11,11 @@ skills = [ "ruby", "ruby on rails", "javascript", "react",
   "c#", "node.js", "php", "nim", "julia", "lisp", "pascal",
   "java", "kotlin", "html", "css", "laravel", "go", "r",
   "typescript", "lua", "coffeescript", "elixir", "phoenix",
-  "django", "haskell", "scala", "swift", "crystal",
-  "erlang", "rust", "elm", "perl", "cobol", "dart",
-  "fortran", "sass", "slim", "matlab", "solidity", "sql",
+  "rust", "elm", "perl", "cobol", "dart", "sql", "erlang",
+  "fortran", "sass", "slim", "matlab", "solidity", "reasonml",
   "unity", "visual basic", "web assembly", "angular",
   "backbone", "ember", "expressjs", "knockoutjs", "meteor",
+  "django", "haskell", "scala", "swift", "crystal",
   "kepler", "play", "lift", "drupal", "symfony", "sinatra" ]
 skills.each { |s| Skill.create!(name: s) }
 puts "Created #{Skill.count} skills!"

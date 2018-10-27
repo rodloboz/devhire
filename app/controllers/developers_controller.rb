@@ -25,6 +25,7 @@ class DevelopersController < ApplicationController
   def create
     @developer = Developer.new(developer_params)
     @developer.user = current_user
+    byebug
     if @developer.save
       redirect_to profile_path
     else
@@ -55,8 +56,9 @@ class DevelopersController < ApplicationController
 
   def developer_params
     params.require(:developer).permit(
-      :fist_name, :last_name, :github_username,
-      :avatar_url, :bio, :hourly_rate
+      :first_name, :last_name, :github_username,
+      :avatar_url, :bio, :hourly_rate,
+      skill_ids: []
     )
   end
 end

@@ -1,5 +1,6 @@
 import 'bootstrap';
 import './application.css';
+import '../components/select';
 import { toggleIcons } from '../components/bookmarking';
 import { toggleDateInputs } from '../components/booking';
 import { loadDynamicBannerText } from '../components/banner';

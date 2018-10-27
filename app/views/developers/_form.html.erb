@@ -2,6 +2,7 @@
   <%= f.input :first_name, autofocus: true %>
   <%= f.input :last_name %>
   <%= f.input :github_username %>
+  <%= f.association :skills, collection: Skill.all, include_blank: false, include_hidden: false %>
   <%= f.input :avatar_url %>
   <%= f.input :bio %>
   <%= f.input :hourly_rate %>

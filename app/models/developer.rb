@@ -5,6 +5,9 @@ class Developer < ApplicationRecord
   has_many :projects
   has_many :bookings
 
+  validates :first_name, :last_name, :skills, :github_username, presence: true
+  validates :bio, presence: true, length: { minimum: 44 }
+
   default_scope { order(hourly_rate: :desc) }
 
   def self.find_by_skill(skill)
