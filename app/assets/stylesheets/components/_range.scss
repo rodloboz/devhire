@@ -1,0 +1,25 @@
+.noUi-base {
+  color: $light-bg;
+ border: 1px solid $blue;
+}
+
+.noUi-handle {
+  border: none;
+  border-radius: 25px;
+  background: white;
+  border: 2px solid $blue;
+  height: 17px;
+  width: 17px;
+  top: -0.52em;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:after, &:before {
+    content: none;
+  }
+}
+
+.noUi-connect {
+  background: $blue;
+}

@@ -1,6 +1,6 @@
 import { tns } from 'tiny-slider/src/tiny-slider';
 
-const initSlider = function() {
+const initHTMLSlider = function() {
   const projects = document.getElementById('js-projects');
   const prevBtn = document.querySelector('.chevron-left');
   const nextBtn = document.querySelector('.chevron-right');
@@ -23,4 +23,4 @@ const initSlider = function() {
   }
 };
 
-export { initSlider };
+export { initHTMLSlider };

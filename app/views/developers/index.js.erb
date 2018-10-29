@@ -1,0 +1,7 @@
+function renderDevelopers(developersHTML) {
+  const developers = document.getElementById('developers');
+  developers.innerHTML = developersHTML;
+};
+
+const developersHTML = '<%= j render @developers %>';
+renderDevelopers(developersHTML);

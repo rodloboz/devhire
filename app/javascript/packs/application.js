@@ -5,9 +5,9 @@ import { toggleIcons } from '../components/bookmarking';
 import { toggleDateInputs } from '../components/booking';
 import { loadDynamicBannerText } from '../components/banner';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { initSlider } from '../components/portfolio';
+import { initHTMLSlider } from '../components/portfolio';
 import { autocompleteSearch } from '../components/autocomplete';
-import { animateSubnavInput } from '../components/subnav';
+import { animateSubnavInput, initRangeSlider } from '../components/subnav';
 
 const homePage = document.querySelector('.pages.home');
 if (homePage) {
@@ -24,5 +24,6 @@ if (devIndexPage) {
   autocompleteSearch();
 }
 
-initSlider();
+initHTMLSlider();
+initRangeSlider();
 toggleDateInputs();

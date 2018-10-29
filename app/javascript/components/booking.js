@@ -40,12 +40,14 @@ const toggleDateInputs = function() {
     flatpickr(startDateInput, {
     minDate: 'today',
     dateFormat: 'd-m-Y',
-    onChange: function(_, selectedDate) {
+    onChange: function(selectedDates, selectedDate) {
       if (selectedDate === '') {
         costs.classList.remove('is-visible');
         endDateInput.disabled = true;
       }
-      endDateCalendar.set('minDate', selectedDate);
+      let minDate = selectedDates[0];
+      minDate.setDate(minDate.getDate() + 1);
+      endDateCalendar.set('minDate', minDate);
       endDateInput.disabled = false;
     }
   });

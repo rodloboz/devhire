@@ -6,3 +6,15 @@
   </div>
 </div>
 
+<div class="container">
+  <%= form_tag developers_path, method: "get", class: "form-inline" do %>
+    <div class="price-range-slider">
+      <p class="range-value">
+        <%= range_field :hourly_rate, in: 0..600, autocomplete: :off, class: "range-bar",
+          min: 0, max: 600, step: 50 %>
+      </p>
+      <div id="slider-range" class="range-bar"></div>
+    </div>
+  <% end %>
+</div>
+
