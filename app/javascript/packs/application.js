@@ -7,6 +7,7 @@ import { loadDynamicBannerText } from '../components/banner';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initSlider } from '../components/portfolio';
 import { autocompleteSearch } from '../components/autocomplete';
+import { animateSubnavInput } from '../components/subnav';
 
 const homePage = document.querySelector('.pages.home');
 if (homePage) {
@@ -19,6 +20,8 @@ if (homePage) {
 const devIndexPage = document.querySelector('.developers.index');
 if (devIndexPage) {
   toggleIcons();
+  animateSubnavInput();
+  autocompleteSearch();
 }
 
 initSlider();

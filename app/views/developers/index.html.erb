@@ -1,3 +1,16 @@
+<div class="subnav">
+  <div class="search">
+    <%= form_tag(developers_path, method: "get", class: "form-inline") do %>
+      <div class="input-wrapper search-data" data-skills="<%= @skills.to_json %>">
+        <%= icon('fas', 'search', class: 'search-icon is-visible') %>
+        <%= text_field_tag :q, nil, autocomplete: :off, class: "search-input" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="price-filter">
+
+  </div>
+</div>
 <div class="container">
   <h1>Developers</h1>
 

@@ -3,6 +3,7 @@ class DevelopersController < ApplicationController
   before_action :set_developer, only: [:show, :edit, :update]
 
   def index
+    @skills = Skill.pluck(:name).sort
     query = params[:q]
     @developers = Developer.all #.includes(:skills) => filters skills as well
     @developers = @developers.find_by_skill(query) if query.present?
