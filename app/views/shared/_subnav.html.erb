@@ -1,30 +1,31 @@
-<div class="subnav">
-  <div class="search">
-    <%= form_tag developers_path, method: "get", class: "form-inline" do %>
-      <div class="input-wrapper search-data" data-skills="<%= @skills.to_json %>">
-        <%= icon('fas', 'search', class: 'search-icon is-visible') %>
-        <%= text_field_tag :q, nil, autocomplete: :off, class: "search-input" %>
-      </div>
-    <% end %>
-  </div>
-  <div class="price-filter">
-    <div class="dropdown">
-      <a class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <span id="min-price">
-          <%= text_field_tag :price_gteq, "€0", class: "search-filter-input" %>
-        </span>
-        -
-        <span id="max-price">
-          <%= text_field_tag :price_lteq, "€600", class: "search-filter-input" %>
-        </span>
-        <span class="caret"></span>
-      </a>
-      <div id="budget" class="dropdown-menu pull-right" aria-labelledby="dLabel">
-        <div id="slider-range" class="range-bar"></div>
-        <div class="search-options-submit text-center">
-          <%= content_tag(:a, 'Apply', name: 'submit', class: 'submit_link') %>
+<%= form_tag developers_path, method: "get", class: "form-inline" do %>
+  <div class="subnav">
+    <div class="search">
+        <div class="input-wrapper search-data" data-skills="<%= @skills.to_json %>">
+          <%= icon('fas', 'search', class: 'search-icon is-visible') %>
+          <%= text_field_tag :q, @query, autocomplete: :off, class: "search-input" %>
+        </div>
+    </div>
+    <div class="price-filter">
+      <div class="dropdown">
+        <a class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span id="min-price">
+            <%= text_field_tag :price_gteq, "€0.00", class: "search-filter-input", readonly: true %>
+          </span>
+          -
+          <span id="max-price">
+            <%= text_field_tag :price_lteq, "€600.00", class: "search-filter-input", readonly: true %>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <div id="slider-container" class="dropdown-menu pull-right" aria-labelledby="dLabel">
+          <div id="slider-range" class="range-bar" data-max=<%= @max.to_json %> data-min=<%= @min.to_json %>></div>
+          <div class="search-options-submit text-center">
+            <%= content_tag(:a, 'Apply', name: 'submit', class: 'submit_link') %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <%= submit_tag "Search", id: "subnav-form__submit" %>
+<% end %>

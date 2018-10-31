@@ -4,9 +4,18 @@ class DevelopersController < ApplicationController
 
   def index
     @skills = Skill.pluck(:name).sort
-    query = params[:q]
+    @query = params[:q]
+    @min = 0
+    @max = 600
     @developers = Developer.all #.includes(:skills) => filters skills as well
-    @developers = @developers.find_by_skill(query) if query.present?
+    @developers = @developers.find_by_skill(@query) if @query.present?
+    if params[:price_gteq] && params[:price_lteq]
+      session[:price_gteq] = params[:price_gteq]
+      session[:price_lteq] = params[:price_lteq]
+      @min = params[:price_gteq][1..-1].to_i
+      @max = params[:price_lteq][1..-1].to_i
+      @developers = @developers.find_by_price_range(@min, @max)
+    end
   end
 
   def show

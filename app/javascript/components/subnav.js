@@ -16,11 +16,19 @@ const animateSubnavInput = function() {
 };
 
 const initRangeSlider = function() {
+  const sliderContainer = document.getElementById('slider-container');
   const slider = document.getElementById('slider-range');
+  const minInput = document.querySelector('#min-price input');
+  const maxInput = document.querySelector('#max-price input');
 
-  if (slider) {
+  if (sliderContainer && slider) {
+    sliderContainer.addEventListener('click', e => e.stopPropagation());
+
+    const max = JSON.parse(slider.dataset.max);
+    const min = JSON.parse(slider.dataset.min);
+console.log(min, max)
     noUiSlider.create(slider, {
-        start: [100, 400],
+        start: [min, max],
         connect: true,
         step: 10,
         range: {
@@ -28,7 +36,23 @@ const initRangeSlider = function() {
             'max': 600
         }
     });
+
+    slider.noUiSlider.on('update', (values, handle) => {
+      let value = values[handle];
+      if (handle) {
+          maxInput.value = '€' + value;
+      } else {
+          minInput.value = '€' + value;
+      }
+    });
+
+    const submitBtn = document.getElementById('subnav-form__submit');
+    const apply = document.querySelector('.submit_link');
+    apply.addEventListener('click', () => submitBtn.click());
   }
 };
 
-export { animateSubnavInput, initRangeSlider };
+export {
+  animateSubnavInput,
+  initRangeSlider,
+};
