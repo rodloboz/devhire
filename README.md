@@ -33,7 +33,11 @@ Create a file `banner.js` inside components. We'll implement the dynamic banner 
 ```shell
 yarn add typed.js
 ````
-Create a function `loadDynamicBannerText` in banner.js and once you've implemented the feature don't forget to **export** it and then **import** it in `application.js`.
+Create a function `loadDynamicBannerText` in banner.js.
+
+We have prepared the markup with an element **#js-typed-text** to act as the target for the `Typed` function.
+
+Once you've implemented the feature don't forget to **export** it and then **import** it in `application.js`.
 
 Done? Good! Time to `commit` and `push`.
 
