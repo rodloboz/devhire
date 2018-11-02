@@ -42,7 +42,18 @@ Once you've implemented the feature don't forget to **export** it and then **imp
 Done? Good! Time to `commit` and `push`.
 
 ## 2 - Animate navbar on scroll!
-TODO: Instructions
+
+Still on the landing page, our transparent sticky navbar looks strange once you scroll past the banner. Let's update it on scroll!
+
+Create a `navbar.js` in the components folder to implement features related to the navbar.
+
+On the landing page, the navbar starts with the class **`navbar-wagon-transparent`**, which has the properties to make it transparent, and the class **`navbar-wagon-filled`** styles a white navbar.
+
+You can add and __event listener__ to `window` to listen to the `scroll` event. When the window scrolls past halfway of the banner you should __remove__ the `navbar-wagon-transparent` class __add__ the `navbar-wagon-transparent` class.
+
+__Hint:__ The window object has a `scrollY` which gives you its y-axis or vertical position and an `ìnnerHeight` that measues how tall the window is.
+
+Don't forget to **export** and **import** your function. Test it and once it's working it's a good time to `commit` and `push`.
 
 ## 3 - Autocomplete suggestions with `js-autocomplete`
 TODO: Instructions
