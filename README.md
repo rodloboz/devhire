@@ -1,3 +1,7 @@
+We have an app to search and hire developers. The backend, markup and css have been completed but we still need to animate and give some behaviour to the UI with **javascript**.
+
+You can see the final result here :point_right: https://devhire-demo.herokuapp.com/
+
 ## Setup
 
 ```shell
@@ -7,8 +11,31 @@
  rails server
 ```
 
+Open you browser and visit `localhost:3000`.
+
 ## 1 - Animate text with `typed.js`
-TODO: Instructions
+
+The landing page, which is rendered by `home#pages`, has a banner with a main heading, a subheading and a search input.
+
+![landing banner](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-02%20at%2009.53.35.png?raw=true)
+
+Let's animate the subheading with `typed.js` so that instead of a static sentence, the user will see animated programming language names (`ruby`, `react`, `elixir`, `python`, `swift`) behind the **_devs in the world_**.
+
+**Remember** that no javascript should go in the asset pipeline. We will be coding all javascript in `app/javascript/` and `app/javascript/packs/application.js` is webpack's entry point as required in the `application.html.erb` layout file:
+
+```html
+<%= javascript_pack_tag 'application' %>
+```
+
+First create a `components` folder inside `app/javascript/`. This is where we will code all of our javascript features.
+
+Create a file `banner.js` inside components. We'll implement the dynamic banner text here. Add `typed.js` to your project using the `yarn` package manager:
+```shell
+yarn add typed.js
+````
+Create a function `loadDynamicBannerText` in banner.js and once you've implemented the feature don't forget to **export** it and then **import** it in `application.js`.
+
+Done? Good! Time to `commit` and `push`.
 
 ## 2 - Animate navbar on scroll!
 TODO: Instructions
