@@ -51,12 +51,42 @@ On the landing page, the navbar starts with the class **`navbar-wagon-transparen
 
 You can add an __event listener__ to `window` to listen to the `scroll` event. When the window scrolls past halfway of the banner you should __remove__ the `navbar-wagon-transparent` class and __add__ the `navbar-wagon-transparent` class. When you scroll back up, you need to implement the reverse behaviour.
 
-__Hint:__ The window object has a `scrollY` which gives you its y-axis or vertical position and an `ìnnerHeight` that measures how tall the window is.
+__Hint:__ The window object has a `scrollY` which gives you its y-axis or vertical position and an `innerHeight` that measures how tall the window is.
 
 Don't forget to **export** and **import** your function. Test it and once it's working it's a good time to `commit` and `push`.
 
 ## 3 - Autocomplete suggestions with `js-autocomplete`
-TODO: Instructions
+
+For the remaining feature of the landing page, we want to have the search input display **suggestions** as the user enters search terms.
+
+A popular implementation of this featue is with Twitter's robust `typeahead.js` and `bloodhound`, but the same effect can be achieved with the simpler `js-autocomplete`.
+
+This library allows  _asyncronous_ requests to fetch data from a remote backend, but when the amount of data is not significant (as in this case), it is better to send all the data to the frontend so that we don't have to send http requests as the user types.
+
+The **id** `#search-data` has been added to the search input element, which receives a stringified json with all the programming languages in the database. Use this selector to read and parse the `dataset-skills`.
+
+You can create the `autocomplete.js` file inside your components folder. To require the library run from the terminal:
+
+```shell
+yarn add js-autocomplete
+```
+
+You can find this npm package's documentation :point_right: [here](https://goodies.pixabay.com/javascript/auto-complete/demo.html).
+
+Don't forget that this package is shipped with its own **css styles**, so you'll need to import them. You can do this by uncomenting `<%= stylesheet_pack_tag 'application', media: 'all' %>` in `application.html`. Then create a `application.css` file in `app/javascript/packs` and add the following:
+
+```javascript
+// app/javascript/packs/application.js
+import './application.css';
+```
+
+```scss
+// app/javascript/packs/application.css
+@import 'js-autocomplete/auto-complete.css';
+```
+
+When you're done, `commit` and `push`.
+
 ## 4 - Bookmarking developers
 TODO: Instructions
 

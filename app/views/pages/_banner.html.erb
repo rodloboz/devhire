@@ -3,7 +3,7 @@
     <h1 id="banner-text">devhire</h1>
     <p>Find the best <span id="js-typed-text"></span>devs in the world</p>
       <%= form_tag(developers_path, method: 'get', class: "form-inline") do %>
-        <div class="form-search search-data" data-skills="<%= @skills.to_json %>">
+        <div id= "search-data" class="form-search search-data" data-skills="<%= @skills.to_json %>">
             <%= text_field_tag :q, nil, autocomplete: :off, class: "form-control search-input", placeholder: "javascript, ruby, python ..." %>
             <%= submit_tag "Search", class: "btn btn-primary button-home" %>
         </div>

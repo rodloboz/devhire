@@ -6,7 +6,7 @@ const handleSelect = function(event, term, item) {
 }
 
 const autocompleteSearch = function() {
-  const skills = JSON.parse(document.querySelector('.search-data').dataset.skills)
+  const skills = JSON.parse(document.getElementById('search-data').dataset.skills)
   const searchInput = document.getElementById('q');
 
   if (skills && searchInput) {
