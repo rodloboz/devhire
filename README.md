@@ -88,10 +88,39 @@ import './application.css';
 When you're done, `commit` and `push`.
 
 ## 4 - Bookmarking developers
-TODO: Instructions
+
+When users are logged in, they can **bookmark** their favorite developers for future reference. There is a _bookmark icon_ on the top-right corner to each developer card.
+
+![developer card](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-05%20at%2014.21.54.png?raw=true)
+
+Right now nothing happens when the user clicks on the icon. Let's change that.
+
+Start by creating a `bookmarking.js` component file. The idea is to add a `click` event listener to each icon which will submit a `post` request to `/bookmarked_developers` to create with the `developer_id` in the body to _create_ a new bookmark **OR** a `delete` request to `/bookmarked_developers/:id` with the `developer_id` in the body to _destroy_ an existing bookmark.
+
+After the server responds, you should **toggle** the respective icon. You can select all icons using the selector `.dev-bookmark i`. Each icon is a _fontawesome_ icon that is **full** (or bookmarked) when it has the class `fas` and is **empty** (or not bookmarked) when it has the class `far`. You should toggle between these two classes.
+
+To communicate with the rails backend, use the `fetch` API. Fetch works with `promisses`, so you can wait for the backend to respond before **toggling** an icon. Here's an example of a fetch request with a promisse:
+
+```javascript
+fetch('/posts', {
+    method: 'post',
+    body: JSON.stringify({content: 'Hello world!'}),
+    headers: {
+    'Content-Type': 'application/json',
+    },
+})
+    .then(() => console.log('You have just created a post!'))
+    .catch(error => console.log('Something went wrong...', error));
+```
+
+**Hint**: You can get the `developer_id` from the parent developer card of the icon - they have *ids* in the following format: `id="dev-4"`.
+
+Test the app in the browser and use the rails console `rails c` to confirm if the bookmarks are being sucessfully created and deleted.
 
 ## 5 - Adding a Datepicker (`flatpickr`)
 TODO: Instructions
+
+Let's move to the developer's individual page: `show#developers`. There's a lot of things missing here, but we'll start with the d
 
 ## 6 - Calculating booking total!
 TODO: Instructions
