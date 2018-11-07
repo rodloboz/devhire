@@ -191,7 +191,12 @@ Play with the [demo](https://devhire-demo.herokuapp.com/) until you get the same
 Once you're done, `commit` and `push`.
 
 ## 7 - Adding a carousel slider (`tiny-slider`)
-TODO: Instructions
+
+One last thing to do in the developers page.
+
+At the end of the developers page, there is a portfolio section showcasing the work of each developer. Right now it doesn't look very nice - it's just one long column. Let's turn this section into a carousel **slider**!
+
+![portfolio slider](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-07%20at%2016.28.42.png?raw=true)
 
 
 ## 8 - Using a jQuery plugin (`select2`)
