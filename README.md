@@ -123,6 +123,8 @@ Let's move to the developer's individual page: `show#developers`. There's a lot 
 
 Users should be able to book a developer by picking a _start date_ and an _end date_ date. The backend already has the validation to only accept a booking if **both** dates are present.
 
+Developers have _no unavailable dates_ (they are **always** available). The only **restrictions** are that a user cannot book dates in the past and the _end date_ must be greater than the _start date_.
+
 We'll use `flatpickr` for the calendar picker.
 
 Read the documentation and have a look at the examples here :point_right: https://flatpickr.js.org/
@@ -146,13 +148,47 @@ flatpickr(inputSelector, {
 **Note:** The _end date input_ should be **disabled** if the _start date input_ is blank.
 
 ## 6 - Calculating booking total!
-TODO: Instructions
 
-For simplicity, we'll assume that the developer will work **6 hours** on each day they are booked and there are _no unavailable dates_. The only **restrictions** are that you cannot book dates in the past and the _end date_ must be greater than the _start date_. Also, there is a **15% service charge** on the price (_subtotal_) which is used to calculate the **total price**.
+Once the user picks the _start date_ and the _end date_, we should **update** and **display** the total price calculation.
+
+For simplicity, we'll assume that the developer will work **6 hours** on each day they are booked. There is also a **15% service charge** which should be applied to the **subtotal** in order to calculate the **total price**.
 
 Here's what we're going for:
 
 ![developer card](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-07%20at%2013.40.19.png?raw=true)
+
+On the inital page load, the costs element (`.costs`) is not visible. After the user has picked the _end date_ you should **calculate** and **update** the costs and make this element visible by adding the class `is-visible`.
+
+**Hint:** You might want to use the flatpikr event `onChange`.
+
+Define a function `updateCosts` which received the number of `hours` booked, which is difference in days between the `endDate` and the `startDate` times *6*.
+
+```javascript
+let hours = Math.ceil((endDate - startDate) / (1000 * 3600 * 24)) * 6;
+```
+
+You can use the following helper function to parse dates from the input fields:
+
+```javascript
+const parseDate = (string) => {
+  const pattern = /(\d{2})-(\d{2})-(\d{4})/;
+  return new Date(string.replace(pattern,'$3-$2-$1'));
+}
+```
+
+And another helper function to display the price values with commas:
+
+```javascript
+const numberWithCommas = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+```
+
+Remember that if the user _clears_ any of the date inputs, you should **hide** the costs section by removing the class `is-visible`.
+
+Play with the [demo](https://devhire-demo.herokuapp.com/) until you get the same behaviour.
+
+Once you're done, `commit` and `push`.
 
 ## 7 - Adding a carousel slider (`tiny-slider`)
 TODO: Instructions

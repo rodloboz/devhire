@@ -9,7 +9,7 @@ const parseDate = (string) => {
   return new Date(string.replace(pattern,'$3-$2-$1'));
 }
 
-const calculateTotal = function(hours) {
+const updateCosts = function(hours) {
   const costs = document.querySelector('.costs')
 
   if (costs) {
@@ -27,14 +27,13 @@ const calculateTotal = function(hours) {
     priceElem.innerHTML = numberWithCommas(price.toFixed(2));
     serviceFeeElem.innerHTML = numberWithCommas(serviceCharge.toFixed(2));
     totalPriceElem.innerHTML = numberWithCommas(totalPrice.toFixed(2));
-
-    costs.classList.add('is-visible');
   }
 }
 
 const toggleDateInputs = function() {
   const startDateInput = document.getElementById('booking_start_date');
   const endDateInput = document.getElementById('booking_end_date');
+  const costs = document.querySelector('.costs');
 
   if (startDateInput && endDateInput) {
     flatpickr(startDateInput, {
@@ -56,13 +55,13 @@ const toggleDateInputs = function() {
         dateFormat: 'd-m-Y',
         onChange: function(_, selectedDate) {
           if (selectedDate === '') {
-            let costs = document.querySelector('.costs');
             costs.classList.remove('is-visible');
           } else {
             let startDate = parseDate(startDateInput.value);
             let endDate = parseDate(endDateInput.value);
             let hours = Math.ceil((endDate - startDate) / (1000 * 3600 * 24)) * 6;
-            calculateTotal(hours);
+            updateCosts(hours);
+            costs.classList.add('is-visible');
           }
         },
       });
