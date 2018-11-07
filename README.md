@@ -123,13 +123,15 @@ Let's move to the developer's individual page: `show#developers`. There's a lot 
 
 Users should be able to book a developer by picking a _start date_ and an _end date_ date. The backend already has the validation to only accept a booking if **both** dates are present.
 
-We'll use `flatpickr` for the calendar picker. Read the documentation and have a look at the examples here :point_right: https://flatpickr.js.org/
+We'll use `flatpickr` for the calendar picker.
+
+Read the documentation and have a look at the examples here :point_right: https://flatpickr.js.org/
 
 `yarn add flatpickr` to install the npm package and then create a `booking.js` component file and `import flatpickr from 'flatpickr'`.
 
 You will need to create two instances of flatpickr: one for the **start date** and another for the **end date**. The selectors you want to target for each of these are the classes `booking_start_date` and `booking_end_date`.
 
-To crate an instance of `flatpikr` you pass the input element via a **selector** and an object `{}` of **options**:
+To create an instance of `flatpikr`, pass the input element via a **selector** and an object `{}` of **options** to `flatpickr`. There are several options available, from specifying the `minDate` and `dateFormat` to providing _callback_ functions on specific **events** like in the example below:
 
 ```javascript
 flatpickr(inputSelector, {
