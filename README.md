@@ -202,7 +202,17 @@ We'll be using `tiny-slider`, which is a vanilla javascript package, to implemen
 
 Documentation here :point-right: https://github.com/ganlanyuan/tiny-slider
 
+Start by installing the `tiny-slider` with `yarn`. Create `portfolio.js` inside the javascript components file and import:
 
+```javascript
+import { tns } from 'tiny-slider/src/tiny-slider';
+```
+
+To target the container of the project cards use the selector `#js-projects`. This is the container element for tiny slider. We will also be using custom navigation elements, so we want to disable tiny slider's default `nav` and `controls` elements. You should also specity the `gutter` size and the number of `items` you want to display on each `page` (it accepts floating point numbers).
+
+The custom navigation controls are styled with the classes `chevron-left` to go back (_previous_) and `chevron-right` to go forward (_next_). You will need to add a `click` event to each of these controls and call the function `goTo` on the slider instance in order to go back (`'prev'`) or forward (`'next'`).
+
+Test in the browser that the carousel slider behaves as expected and 'commit' and 'push'.
 
 ## 8 - Using a jQuery plugin (`select2`)
 TODO: Instructions
