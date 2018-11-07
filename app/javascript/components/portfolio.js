@@ -1,4 +1,4 @@
-import { tns } from 'tiny-slider/src/tiny-slider';
+import { tns } from 'tiny-slider`';
 
 const initHTMLSlider = function() {
   const projects = document.getElementById('js-projects');

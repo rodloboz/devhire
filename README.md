@@ -198,6 +198,11 @@ At the end of the developers page, there is a portfolio section showcasing the w
 
 ![portfolio slider](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-07%20at%2016.28.42.png?raw=true)
 
+We'll be using `tiny-slider`, which is a vanilla javascript package, to implement the carousel slider.
+
+Documentation here :point-right: https://github.com/ganlanyuan/tiny-slider
+
+
 
 ## 8 - Using a jQuery plugin (`select2`)
 TODO: Instructions
