@@ -118,9 +118,15 @@ fetch('/posts', {
 Test the app in the browser and use the rails console `rails c` to confirm if the bookmarks are being sucessfully created and deleted.
 
 ## 5 - Adding a Datepicker (`flatpickr`)
-TODO: Instructions
 
-Let's move to the developer's individual page: `show#developers`. There's a lot of things missing here, but we'll start with the d
+Let's move to the developer's individual page: `show#developers`. There's a lot of things missing here, but we'll start with the **booking widget**.
+
+Users should be able to book a developer by picking a _start date_ and an _end date_ date. For simplicity, we'll assume that the developer will work **6 hours** on each day they are booked and there are _no unavailable dates_. The only **restrictions** are that you cannot book dates in the past and the _end date_ must be greater than the _start date_. Also, there is a **15% service charge** on the price (_subtotal_) which is used to calculate the **total price**.
+
+Here's what we're going for:
+
+![developer card](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-07%20at%2013.40.19.png?raw=true)
+
 
 ## 6 - Calculating booking total!
 TODO: Instructions
