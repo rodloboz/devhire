@@ -131,6 +131,12 @@ Read the documentation and have a look at the examples here :point_right: https:
 
 `yarn add flatpickr` to install the npm package and then create a `booking.js` component file and `import flatpickr from 'flatpickr'`.
 
+**Note:** `flatpikr` comes with it's own css styling, so we'll need to load it in `app/javascript/packs/application.css`:
+
+```scss
+@import 'flatpickr/dist/flatpickr.css';
+``
+
 You will need to create two instances of flatpickr: one for the **start date** and another for the **end date**. The selectors you want to target for each of these are the classes `booking_start_date` and `booking_end_date`.
 
 To create an instance of `flatpikr`, pass the input element via a **selector** and an object `{}` of **options** to `flatpickr`. There are several options available, from specifying the `minDate` and `dateFormat` to providing _callback_ functions on specific **events** like in the example below:
@@ -208,15 +214,48 @@ Start by installing the `tiny-slider` with `yarn`. Create `portfolio.js` inside 
 import { tns } from 'tiny-slider/src/tiny-slider';
 ```
 
+Don't forget to also import the css in the appropriate css file:
+
+```scss
+@import 'tiny-slider/dist/tiny-slider.css';
+```
+
 To target the container of the project cards use the selector `#js-projects`. This is the container element for tiny slider. We will also be using custom navigation elements, so we want to disable tiny slider's default `nav` and `controls` elements. You should also specity the `gutter` size and the number of `items` you want to display on each `page` (it accepts floating point numbers).
 
 The custom navigation controls are styled with the classes `chevron-left` to go back (_previous_) and `chevron-right` to go forward (_next_). You will need to add a `click` event to each of these controls and call the function `goTo` on the slider instance in order to go back (`'prev'`) or forward (`'next'`).
 
-Test in the browser that the carousel slider behaves as expected and 'commit' and 'push'.
+Test in the browser that the carousel slider behaves as expected and `commit` and `push`.
 
 ## 8 - Using a jQuery plugin (`select2`)
-TODO: Instructions
 
+So far we've been using vanilla javascript and packages. Let's use a jQuery plugin.
+
+If a user is logged in, they can create their own _developer profile_ by clicking on **Become a developer** link on the navbar. Here, among other things, they will be able to select their current skills. Right now, the **multiple select input** is looking rather boring. Let's __selectize__ it!
+
+Here's what we're going for:
+![portfolio slider](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-07%20at%2019.22.41.png?raw=true)
+
+Because we're using `bootstrap`, we've already configured `webpack` to `jQuery` as a plugin in `environment.js`:
+
+```javascript
+// Bootstrap 3 has a dependency over jQuery:
+const webpack = require('webpack')
+environment.plugins.prepend('Provide',
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery'
+  })
+)
+```
+
+Install the package `select2` with `yarn`, create a `select.js` component. Import both `jQuery` and the `select2` plugin and its **css stylesheet** located in `select2/dist/css/select2.css`:
+
+```javascript
+import $ from 'jquery';
+import 'select2';
+```
+
+The selector for the skills input is `#developer_skill_ids`. You can target this selector with `$` and call `select2()` on it. That's it! Our multiple select input has been greatly improved.
 
 ## 9 - Adding behaviour to the search subnavbar
 TODO: Instructions
