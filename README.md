@@ -258,8 +258,16 @@ import 'select2';
 The selector for the skills input is `#developer_skill_ids`. You can target this selector with `$` and call `select2()` on it. That's it! Our multiple select input has been greatly improved.
 
 ## 9 - Adding behaviour to the search subnavbar
-TODO: Instructions
 
+Let's add some behaviour to the _search subnavbar_ on `index#developers`.
+
+When the user clicks on the search icon, the _input_ should become visible with a blue bottom border. At the same time, the icon should become hidden.
+
+This can be achieved by removing class `is-visible` from the search icon (`.search-icon`) and adding the class `is-visible` to the search input (`.search-input`).
+
+Create a `subnav.js` file and implement the behaviour in a function `animateSubnavInput`.
+
+**Hint:** Use the `focus` and `focusout` events.
 
 ## 10 - Filtering results with a range slider (`nouislider`)
 TODO: Instructions

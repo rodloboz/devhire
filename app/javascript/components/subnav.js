@@ -26,7 +26,7 @@ const initRangeSlider = function() {
 
     const max = JSON.parse(slider.dataset.max);
     const min = JSON.parse(slider.dataset.min);
-console.log(min, max)
+
     noUiSlider.create(slider, {
         start: [min, max],
         connect: true,
