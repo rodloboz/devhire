@@ -235,7 +235,7 @@ If a user is logged in, they can create their own _developer profile_ by clickin
 Here's what we're going for:
 ![portfolio slider](https://github.com/rodloboz/workshops/blob/master/images/01-devhire/Screen%20Shot%202018-11-07%20at%2019.22.41.png?raw=true)
 
-Because we're using `bootstrap`, we've already configured `webpack` to `jQuery` as a plugin in `environment.js`:
+Because we're using `bootstrap`, we've already configured `webpack` to use `jQuery` as a plugin in `environment.js`:
 
 ```javascript
 // Bootstrap 3 has a dependency over jQuery:

@@ -1,7 +1,7 @@
 <%= form_tag developers_path, method: "get", class: "form-inline" do %>
   <div class="subnav">
     <div class="search">
-        <div class="input-wrapper search-data" data-skills="<%= @skills.to_json %>">
+        <div id="search-data" class="input-wrapper search-data" data-skills="<%= @skills.to_json %>">
           <%= icon('fas', 'search', class: 'search-icon is-visible') %>
           <%= text_field_tag :q, @query, autocomplete: :off, class: "search-input" %>
         </div>
