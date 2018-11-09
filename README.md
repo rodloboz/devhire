@@ -13,6 +13,11 @@ You can see the final result here :point_right: https://devhire-demo.herokuapp.c
 
 Open you browser and visit `localhost:3000`.
 
+## Challenges
+
+* [1 - Animate text with `typed.js`](#1-animate-text-with-typed.js)
+* [2 - Animate navbar on scroll!](#2-animate-navbar-on-scroll!)
+
 ## 1 - Animate text with `typed.js`
 
 The landing page, which is rendered by `home#pages`, has a banner with a main heading, a subheading and a search input.
