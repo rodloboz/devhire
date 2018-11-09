@@ -17,7 +17,14 @@ Open you browser and visit `localhost:3000`.
 
 * [1 - Animate text with `typed.js`](#1---animate-text-with-typedjs)
 * [2 - Animate navbar on scroll!](#2---animate-navbar-on-scroll)
-* * [3 - Autocomplete suggestions with `js-autocomplete`](#3---autocomplete-suggestions-with-js-autocomplete)
+* [3 - Autocomplete suggestions with `js-autocomplete`](#3---autocomplete-suggestions-with-js-autocomplete)
+* [4 - Bookmarking developers](#4---bookmarking-developers)
+* [5 - Adding a Datepicker (flatpickr)](#5---adding-a-datepicker-flatpickr)
+* [6 - Calculating booking total!](#6---calculating-booking-total)
+* [7 - Adding a carousel slider (tiny-slider)](#7---adding-a-carousel-slider-tiny-slider)
+* [8 - Using a jQuery plugin (select2)](#8---using-a-jquery-plugin-select2)
+* [9 - Adding behaviour to the search subnavbar](#9---adding-behaviour-to-the-search-subnavbar)
+* [10 - Filtering results with a range slider (nouislider)](#10---filtering-results-with-a-range-slider-nouislider)
 
 ## 1 - Animate text with `typed.js`
 
@@ -36,6 +43,7 @@ Let's animate the subheading with `typed.js` so that instead of a static sentenc
 First create a `components` folder inside `app/javascript/`. This is where we will code all of our javascript features.
 
 Create a file `banner.js` inside components. We'll implement the dynamic banner text here. Add `typed.js` to your project using the `yarn` package manager:
+
 ```shell
 yarn add typed.js
 ````
