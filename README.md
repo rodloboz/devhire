@@ -15,8 +15,8 @@ Open you browser and visit `localhost:3000`.
 
 ## Challenges
 
-* [1 - Animate text with `typed.js`](#1-animate-text-with-typed.js)
-* [2 - Animate navbar on scroll!](#2-animate-navbar-on-scroll!)
+* [1 - Animate text with `typed.js`](#animate-text-with-typed.js)
+* [2 - Animate navbar on scroll!](#animate-navbar-on-scroll!)
 
 ## 1 - Animate text with `typed.js`
 
