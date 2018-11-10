@@ -284,5 +284,57 @@ Create a `subnav.js` file and implement the behaviour in a function `animateSubn
 **Hint:** Use the `focus` and `focusout` events.
 
 ## 10 - Filtering results with a range slider (`nouislider`)
-TODO: Instructions
+
+Finally, we want to add the possibility to filter our search results in `index#devevelopers` by providing a price/hourly rate range using a **range slider** in the UI.
+
+There are many range sliders libraries, namely as jQuery plugins, but some require setting up jQuery UI in webpack which can be a bit cumbersome.
+
+We're going to use a vanilla javascript library called `nouislider` :point_right: https://refreshless.com/nouislider/
+
+You can use the same `subnav.js` component file to implement a new function `initRangeSlider`. Add `nouislider` to the project with `yarn` and import the respective css:
+
+```scss
+@import 'nouislider/distribute/nouislider.css';
+```
+
+Some of the `nouislider` styling has been overriden with custom styling. You can have a look at the classes that have been restyled in the asset pipiline: `app/assets/stylesheets/components/_range.scss`. In order to achieve this, the order of the _stylesheet import tags_ had to be reversed in `application.html` layout file: first, the webpack stylesheets and then the asset pipeline stylesheets.
+
+```html
+<%= stylesheet_pack_tag 'application', media: 'all' %>
+<%= stylesheet_link_tag 'application', media: 'all' %>
+```
+
+The target for the slider is the element with id `slider-range`. Our app is also passing to the frontend the **minimum** and **maximum** selected values via the _dataset_ properties `min` and `max`. You will need to parse this information from the elements with the selectors `#min-price input` and `#max-price input`.
+
+Here's the configuration being used on the demo, where `min` and `max` stand for the said parsed values.
+
+```javascript
+noUiSlider.create(slider, {
+    start: [min, max],
+    connect: true,
+    step: 10,
+    range: {
+        'min': 0,
+        'max': 600
+    }
+});
+```
+
+`Export` and `import` this new function and test it in the browser.
+
+If everything is working as excepted, you will notice that the values on the search subnavbar are not updating. Make use of the `nouislider` event `update` to update the minimum and maximum input values.
+
+Also, you've probably noticed that the range dropdown closes as soon as the user clicks on it or releases the range _handles_. Let's fixe that!
+
+Target the slider container (`#slider-container`) with a `click` event and stop the default event behaviour with `stopPropagation`.
+
+Finally, have the form submit when the _Apply_ button is clicked. You can add the a `click` event to `.submit_link` and submit the form by targeting the hidden submit button `#subnav-form__submit`.
+
+
+
+
+
+
+
+
 
