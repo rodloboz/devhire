@@ -149,7 +149,7 @@ Read the documentation and have a look at the examples here :point_right: https:
 
 ```scss
 @import 'flatpickr/dist/flatpickr.css';
-``
+```
 
 You will need to create two instances of flatpickr: one for the **start date** and another for the **end date**. The selectors you want to target for each of these are the classes `booking_start_date` and `booking_end_date`.
 
