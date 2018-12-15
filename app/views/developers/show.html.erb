@@ -54,7 +54,7 @@
           €<%= @developer.hourly_rate %><span>/hour</span></%>
         </div>
       </div>
-      <div class="widget-content">
+      <div class="widget-content" data-unavailable="<%= @developer.unavailable_dates.to_json %>">
       <hr>
         <div class="dates">
           <%= render "bookings/form" %>
