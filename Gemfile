@@ -29,4 +29,11 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'rubocop-rspec'
+  gem 'simplecov'
+  gem 'faker'
 end
