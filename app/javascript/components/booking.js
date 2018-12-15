@@ -36,9 +36,12 @@ const toggleDateInputs = function() {
   const costs = document.querySelector('.costs');
 
   if (startDateInput && endDateInput) {
+    const unvailableDates = JSON.parse(document.querySelector('.widget-content').dataset.unavailable)
+
     flatpickr(startDateInput, {
     minDate: 'today',
     dateFormat: 'd-m-Y',
+    disable: unvailableDates,
     onChange: function(selectedDates, selectedDate) {
       if (selectedDate === '') {
         costs.classList.remove('is-visible');
@@ -53,6 +56,7 @@ const toggleDateInputs = function() {
     const endDateCalendar =
       flatpickr(endDateInput, {
         dateFormat: 'd-m-Y',
+        disable: unvailableDates,
         onChange: function(_, selectedDate) {
           if (selectedDate === '') {
             costs.classList.remove('is-visible');

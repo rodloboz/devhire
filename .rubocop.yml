@@ -29,7 +29,9 @@ Casecmp:
   Enabled: false
 CyclomaticComplexity:
   Enabled: false
-MethodMissing:
+Style/MethodMissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
